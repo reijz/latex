@@ -1,10 +1,3 @@
----
-title: Latex Coding Style
-author: Jiheng Zhang
-date:   2016-02-08 16:15:05 +0800
-tags: [latex]
----
-
 # Latex Coding Style
 
 Often in time, I find many latex source files in a mess, making editing an excruciating experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the source code neat, readable and not so painful to do editing. Since we use git, it also makes `diff` easy.

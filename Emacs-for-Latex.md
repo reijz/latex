@@ -1,12 +1,3 @@
----
-title:  "Emacs for Latex on Mac OS X"
-author: Rei Jiheng Zhang
-date:   2015-01-25 16:15:05 +0800
-tags: [emacs, latex]
----
-
-
-
 Install Emacs
 --------
 
