@@ -1,0 +1,74 @@
+\documentclass[opre,nonblindrev]{informs}
+
+\OneAndAHalfSpacedXI
+%\OneAndAHalfSpacedXII 
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Theorem 1.2)
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+\ECRepeatTheorems
+\bibliographystyle{informs} 
+\usepackage{natbib}
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\newblock{\ }%
+ \def\BIBand{and}%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\input{formality.tex}
+% \input{tikz/tikzstyle.tex}
+
+\begin{document}
+
+\TITLE{Generalized Linear Bandits with Local Differential Privacy}
+
+\ARTICLEAUTHORS{%
+\AUTHOR{Yuxuan Han, Zhipeng Liang, Yang Wang, and Jiheng Zhang}
+\AFF{The Hong Kong University of Science and Technology, Clear~Water~Bay, Hong Kong S.A.R., China\\ 
+\EMAIL{\{yhanat, zliangao, yangwang, jiheng\}@connect.ust.hk}}
+}
+
+\ABSTRACT{
+Contextual bandit algorithms are useful in personalized online decision-making. However, many applications such as personalized medicine and online advertising require the utilization of individual-specific information for effective learning, while user's data should remain private from the server due to privacy concerns. This motivates the introduction of local differential privacy (LDP), a stringent notion in privacy, to contextual bandits. In this paper, we design LDP algorithms for stochastic generalized linear bandits to achieve the same regret bound as in non-privacy settings.
+  Our main idea is to develop a stochastic gradient-based estimator and update mechanism to ensure LDP.  
+  We then exploit the flexibility of stochastic gradient descent (SGD), whose theoretical guarantee for bandit problems is rarely explored, in dealing with generalized linear bandits.
+  We also develop an estimator and update mechanism based on Ordinary Least Square (OLS) for linear bandits.
+  Finally, we conduct experiments with both simulation and real-world datasets to demonstrate the consistently superb performance of our algorithms under LDP constraints with reasonably small parameters $(\varepsilon, \delta)$ to ensure strong privacy protection. 
+}
+
+\KEYWORDS{Contextual Bandits; Local Differential Privacy; Generalized Linear Model.} 
+% \HISTORY{This paper was first submitted on April 12, 1922 and has been with the authors for 83 years for 65 revisions.}
+
+\maketitle
+
+
+\section{Introduction}
+
+
+\section{Conclusion}
+
+
+% \ACKNOWLEDGMENT{The authors gratefully acknowledge the existence of the Journal of Irreproducible Results and the support of the Society for the Preservation of Inane Research.}
+
+\bibliography{ref}
+
+\newpage
+
+\appendixhead{Appendix}
+\APPENDICES
+
+\section{Proof of Results}
+
+\subsection{Proof of Lemma}
+
+\begin{lemma}
+	\label{lem:A1}
+    As long as $t>8 \frac{d \log 9 +\log (T/\alpha)}{p_{*}^2}$, the following lower bound
+\end{lemma}
+
+\begin{proof}{Proof of Lemma~X}
+\end{proof}
+
+\end{document}

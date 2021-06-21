@@ -1,0 +1,1503 @@
+@article{Dwork2014,
+abstract = {We consider the problem of privately releasing a low dimensional approximation to a set of data records, represented as a matrix A in which each row corresponds to an individual and each column to an attribute. Our goal is to compute a subspace that captures the covariance of A as much as possible, classically known as principal component analysis (PCA). We assume that each row of A has ℓ2 norm bounded by one, and the privacy guarantee is defined with respect to addition or removal of any single row. We show that the well-known, but misnamed, randomized response algorithm, with properly tuned parameters, provides nearly optimal additive quality gap compared to the best possible singular subspace of A. We further show that when AT A has a large eigenvalue gap - a reason often cited for PCA - the quality improves significantly. Optimality (up to logarithmic factors) is proved using techniques inspired by the recent work of Bun, Ullman, and Vadhan on applying Tardos's fingerprinting codes to the construction of hard instances for private mechanisms for 1-way marginal queries. Along the way we define a list culling game which may be of independent interest. By combining the randomized response mechanism with the wellknown following the perturbed leader algorithm of Kalai and Vempala we obtain a private online algorithm with nearly optimal regret. The regret of our algorithm even outperforms all the previously known online non-private algorithms of this type. We achieve this better bound by, satisfyingly, borrowing insights and tools from differential privacy! {\textcopyright} 2014 ACM.},
+author = {Dwork, Cynthia and Talwar, Kunal and Thakurta, Abhradeep and Zhang, Li},
+doi = {10.1145/2591796.2591883},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/Analyze Gauss- Optimal Bounds for Privacy-Preserving Principal Component Analysis.pdf:pdf},
+isbn = {9781450327107},
+issn = {07378017},
+journal = {Proceedings of the Annual ACM Symposium on Theory of Computing},
+pages = {11--20},
+title = {{Analyze Gauss: Optimal bounds for privacy-preserving principal component analysis}},
+year = {2014}
+}
+
+@book{tsybakov2008introduction,
+  title={Introduction to nonparametric estimation},
+  author={Tsybakov, Alexandre B},
+  year={2008},
+  publisher={Springer Science \& Business Media}
+}
+
+
+@techreport{tropp2011user,
+  title={User-friendly tail bounds for matrix martingales},
+  author={Tropp, Joel A},
+  year={2011},
+  institution={CALIFORNIA INST OF TECH PASADENA}
+}
+
+@inproceedings{kairouz2015composition,
+  title={The composition theorem for differential privacy},
+  author={Kairouz, Peter and Oh, Sewoong and Viswanath, Pramod},
+  booktitle={International conference on machine learning},
+  pages={1376--1385},
+  year={2015},
+  organization={PMLR}
+}
+
+
+@book{vershynin2018high,
+  title={High-dimensional probability: An introduction with applications in data science},
+  author={Vershynin, Roman},
+  volume={47},
+  year={2018},
+  publisher={Cambridge university press}
+}
+
+
+@book{wainwright_2019, place={Cambridge}, series={Cambridge Series in Statistical and Probabilistic Mathematics}, title={High-Dimensional Statistics: A Non-Asymptotic Viewpoint}, DOI={10.1017/9781108627771}, publisher={Cambridge University Press}, author={Wainwright, Martin J.}, year={2019}, collection={Cambridge Series in Statistical and Probabilistic Mathematics}}
+
+@inproceedings{ding2021efficient,
+  title={An efficient algorithm for generalized linear bandit: Online stochastic gradient descent and thompson sampling},
+  author={Ding, Qin and Hsieh, Cho-Jui and Sharpnack, James},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={1585--1593},
+  year={2021},
+  organization={PMLR}
+}
+
+@inproceedings{dwork2006calibrating,
+  title={Calibrating noise to sensitivity in private data analysis},
+  author={Dwork, Cynthia and McSherry, Frank and Nissim, Kobbi and Smith, Adam},
+  booktitle={Theory of cryptography conference},
+  pages={265--284},
+  year={2006},
+  organization={Springer}
+}
+
+@article{Dwork2013,
+abstract = {The problem of privacy-preserving data analysis has a long history spanning multiple disciplines. As electronic data about individuals becomes increasingly detailed, and as technology enables ever more powerful collection and curation of these data, the need increases for a robust, meaningful, and mathematically rigorous definition of privacy, together with a computationally rich class of algorithms that satisfy this definition. Differential Privacy is such a definition. After motivating and discussing the meaning of differential privacy, the preponderance of this monograph is devoted to fundamental techniques for achieving differential privacy, and application of these techniques in creative combinations, using the query-release problem as an ongoing example. A key point is that, by rethinking the computational goal, one can often obtain far better results than would be achieved by methodically replacing each step of a non-private computation with a differentially private implementation. Despite some astonishingly powerful computational results, there are still fundamental limitations - not just on what can be achieved with differential privacy but on what can be achieved with any method that protects against a complete breakdown in privacy. Virtually all the algorithms discussed herein maintain differential privacy against adversaries of arbitrary computational power. Certain algorithms are computationally intensive, others are efficient. Computational complexity for the adversary and the algorithm are both discussed. We then turn from fundamentals to applications other than queryrelease, discussing differentially private methods for mechanism design and machine learning. The vast majority of the literature on differentially private algorithms considers a single, static, database that is subject to many analyses. Differential privacy in other models, including distributed databases and computations on data streams is discussed. Finally, we note that this work is meant as a thorough introduction to the problems and techniques of differential privacy, but is not intended to be an exhaustive survey- there is by now a vast amount of work in differential privacy, and we can cover only a small portion of it. {\textcopyright} 2014 C. Dwork and A. Roth.},
+author = {Dwork, Cynthia and Roth, Aaron},
+doi = {10.1561/0400000042},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/ref/privacy/The Algorithmic Foundations of Differential Privacy.pdf:pdf},
+issn = {15513068},
+journal = {Foundations and Trends in Theoretical Computer Science},
+mendeley-groups = {LDP-Bandit/paper/privacy},
+number = {3-4},
+pages = {211--487},
+title = {{The algorithmic foundations of differential privacy}},
+volume = {9},
+year = {2013}
+}
+
+
+@misc{Ye2020,
+abstract = {A fundamental question for companies is: How to make good decisions with the increasing amount of logged data?. Currently, companies are doing online tests (e.g. A/B tests) before making decisions. However, online tests can be expensive because testing inferior decisions hurt users' experiences. On the other hand, offline causal inference analyzes logged data alone to make decisions, but once a wrong decision is made by the offline causal inference, this wrong decision will continuously to hurt all users' experience. In this paper, we unify offline causal inference and online bandit learning to make the right decision. Our framework is flexible to incorporate various causal inference methods (e.g. matching, weighting) and online bandit methods (e.g. UCB, LinUCB). For these novel combination of algorithms, we derive theoretical bounds on the decision maker's “regret” compared to its optimal decision. We also derive the first regret bound for forest-based online bandit algorithms. Experiments on synthetic data show that our algorithms outperform methods that use only the logged data or only the online feedbacks.},
+archivePrefix = {arXiv},
+arxivId = {2001.05699},
+author = {Ye, Li and Xie, Hong and Lin, Yishi and Lui, John C.S.},
+booktitle = {arXiv},
+eprint = {2001.05699},
+file = {:Users/zhipengliang/Library/Application Support/Mendeley Desktop/Downloaded/Lin, Lui - Unknown - Combining Offline Causal Inference and Online Bandit Learning for Data Driven Decision.pdf:pdf},
+issn = {23318422},
+title = {{Combining offline causal inference and online bandit learning for data driven decisions}},
+year = {2020}
+}
+@article{Bastani2020,
+abstract = {Big data have enabled decision makers to tailor decisions at the individual level in a variety of domains, such as personalized medicine and online advertising. Doing so involves learning a model of decision rewards conditional on individual-specific covariates. In many practical settings, these covariates are high dimensional; however, typically only a small subset of the observed features are predictive of a decision's success. We formulate this problem as a K-armed contextual bandit with high-dimensional covariates and present a new efficient bandit algorithm based on the LASSO estimator. We prove that our algorithm's cumulative expected regret scales at most polylogarithmically in the covariate dimension d; to the best of our knowledge, this is the first such bound for a contextual bandit. The key step in our analysis is proving a new tail inequality that guarantees the convergence of the LASSO estimator despite the non-i.i.d. data induced by the bandit policy. Furthermore, we illustrate the practical relevance of our algorithm by evaluating it on a simplified version of a medication dosing problem. A patient's optimal medication dosage depends on the patient's genetic profile and medical records; incorrect initial dosage may result in adverse consequences, such as stroke or bleeding. We show that our algorithm outperforms existing bandit methods and physicians in correctly dosing a majority of patients.},
+author = {Bastani, Hamsa and Bayati, Mohsen},
+doi = {10.1287/OPRE.2019.1902},
+file = {:Users/zhipengliang/Library/Application Support/Mendeley Desktop/Downloaded/Bastani, Bayati - 2020 - Online decision making with high-dimensional covariates.pdf:pdf},
+isbn = {0000000272},
+issn = {15265463},
+journal = {Operations Research},
+keywords = {Adaptive treatment allocation,Contextual bandits,High-Dimensional Statistics,High-dimensional statistics,LASSO,Lasso,Online learning,Personalized decision making},
+mendeley-tags = {High-Dimensional Statistics,Lasso},
+number = {1},
+pages = {276--294},
+title = {{Online decision making with high-dimensional covariates}},
+volume = {68},
+year = {2020}
+}
+@article{Chen2020,
+abstract = {The prevalence of e-commerce has made detailed customers' personal information readily accessible to retailers, and this information has been widely used in pricing decisions. When involving personalized information, how to protect the privacy of such information becomes a critical issue in practice. In this paper, we consider a dynamic pricing problem over T time periods with an unknown demand function of posted price and personalized information. At each time t, the retailer observes an arriving customer's personal information and offers a price. The customer then makes the purchase decision, which will be utilized by the retailer to learn the underlying demand function. There is potentially a serious privacy concern during this process: a third party agent might infer the personalized information and purchase decisions from price changes from the pricing system. Using the fundamental framework of differential privacy from computer science, we develop a privacy-preserving dynamic pricing policy, which tries to maximize the retailer revenue while avoiding information leakage of individual customer's information and purchasing decisions. To this end, we first introduce a notion of anticipating ($\epsilon$,$\delta$)-differential privacy that is tailored to dynamic pricing problem. Our policy achieves both the privacy guarantee and the performance guarantee in terms of regret. Roughly speaking, for d-dimensional personalized information, our algorithm achieves the expected regret at the order of (formula presented), when the customers' information is adversarially chosen. For stochastic personalized information, the regret bound can be further improved to (Present Formula).},
+archivePrefix = {arXiv},
+arxivId = {2009.12920},
+author = {Chen, Xi and Simchi-Levi, David and Wang, Yining},
+doi = {10.2139/ssrn.3700474},
+eprint = {2009.12920},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/Privacy-Preserving Dynamic Personalized Pricing with Demand Learning.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--35},
+title = {{Privacy-preserving dynamic personalized pricing with demand learning}},
+year = {2020}
+}
+@article{Kamath2020,
+abstract = {Differentially private statistical estimation has seen a flurry of developments over the last several years. Study has been divided into two schools of thought, focusing on empirical statistics versus population statistics. We suggest that these two lines of work are more similar than different by giving examples of methods that were initially framed for empirical statistics, but can be applied just as well to population statistics. We also provide a thorough coverage of recent work in this area.},
+archivePrefix = {arXiv},
+arxivId = {2005.00010},
+author = {Kamath, Gautam and Ullman, Jonathan},
+eprint = {2005.00010},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.1/A Primer on Private Statistics.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--19},
+title = {{A Primer on Private Statistics}},
+year = {2020}
+}
+@article{Chen2017,
+author = {Chen, Cheng and Luo, Luo and Zhang, Weinan and Yu, Yong and Lian, Yijiang},
+file = {:Users/zhipengliang/Library/Application Support/Mendeley Desktop/Downloaded/Chen et al. - 2017 - Efficient and Robust High-Dimensional Linear Contextual Bandits.pdf:pdf},
+keywords = {Machine Learning: Online Learning,Uncertainty in AI: Sequential Decision Making},
+pages = {4259--4265},
+title = {{Efficient and Robust High-Dimensional Linear Contextual Bandits}},
+year = {2017}
+}
+@article{Bun2016,
+abstract = {“Concentrated differential privacy” was recently introduced by Dwork and Rothblum as a relaxation of differential privacy, which permits sharper analyses of many privacy-preserving computations. We present an alternative formulation of the concept of concentrated differential privacy in terms of the R{\'{e}}nyi divergence between the distributions obtained by running an algorithm on neighboring inputs. With this reformulation in hand, we prove sharper quantitative results, establish lower bounds, and raise a few new questions. We also unify this approach with approximate differential privacy by giving an appropriate definition of “approximate concentrated differential privacy”.},
+archivePrefix = {arXiv},
+arxivId = {1605.02065},
+author = {Bun, Mark and Steinke, Thomas},
+doi = {10.1007/978-3-662-53641-4_24},
+eprint = {1605.02065},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.1/Concentrated Differential Privacy- Simplifications, Extensions, and Lower Bounds .pdf:pdf},
+isbn = {9783662536407},
+issn = {16113349},
+journal = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+pages = {635--658},
+title = {{Concentrated differential privacy: Simplifications, extensions, and lower bounds}},
+volume = {9985 LNCS},
+year = {2016}
+}
+
+@article{Ren2020,
+abstract = {This paper investigates the problem of regret minimization for multi-armed bandit (MAB) problems with local differential privacy (LDP) guarantee. In stochastic bandit systems, the rewards may refer to the users' activities, which may involve private information and the users may not want the agent to know. However, in many cases, the agent needs to know these activities to provide better services such as recommendations and news feeds. To handle this dilemma, we adopt differential privacy and study the regret upper and lower bounds for MAB algorithms with a given LDP guarantee. In this paper, we prove a lower bound and propose algorithms whose regret upper bounds match the lower bound up to constant factors. Numerical experiments also confirm our conclusions.},
+archivePrefix = {arXiv},
+arxivId = {2007.03121},
+author = {Ren, Wenbo and Zhou, Xingyu and Liu, Jia and Shroff, Ness B.},
+eprint = {2007.03121},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.22/Multi-Armed Bandits with Local Differential Privacy.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{Multi-Armed Bandits with Local Differential Privacy}},
+year = {2020}
+}
+@article{Duchi,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1604.02390v2},
+author = {Duchi, John C and Jordan, Michael I},
+eprint = {arXiv:1604.02390v2},
+file = {:Users/zhipengliang/Library/Application Support/Mendeley Desktop/Downloaded/Duchi, Jordan - Unknown - Minimax Optimal Procedures for Locally Private Estimation.pdf:pdf},
+title = {{Minimax Optimal Procedures for Locally Private Estimation}}
+}
+@article{Bietti2018,
+abstract = {Contextual bandit algorithms are essential for solving many real-world interactive machine learning problems. Despite multiple recent successes on statistically and computationally efficient methods, the practical behavior of these algorithms is still poorly understood. We leverage the availability of large numbers of supervised learning datasets to empirically evaluate contextual bandit algorithms, focusing on practical methods that learn by relying on optimization oracles from supervised learning. We find that a recent method (Foster et al., 2018) using optimism under uncertainty works the best overall. A surprisingly close second is a simple greedy baseline that only explores implicitly through the diversity of contexts, followed by a variant of Online Cover (Agarwal et al., 2014) which tends to be more conservative but robust to problem specification by design. Along the way, we also evaluate various components of contextual bandit algorithm design such as loss estimators. Overall, this is a thorough study and review of contextual bandit methodology.},
+archivePrefix = {arXiv},
+arxivId = {1802.04064},
+author = {Bietti, Alberto and Agarwal, Alekh and Langford, John},
+eprint = {1802.04064},
+file = {:Users/zhipengliang/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/Documents/Paper/OR/Bandit/A Contextual Bandit Bake-off.pdf:pdf},
+keywords = {contextual bandits,evaluation,online learning},
+pages = {1--45},
+title = {{A Contextual Bandit Bake-off}},
+url = {http://arxiv.org/abs/1802.04064},
+year = {2018}
+}
+@article{Tao2012,
+abstract = {Topics in Random Matrix Theory Terence Tao: University of California, Los Angeles, Los Angeles, CA The field of random matrix theory has seen an explosion of activity in recent years, with connections to many areas of mathematics and physics. However, this makes the current state of the field almost too large to survey in a single book. In this graduate text, we focus on one specific sector of the field, namely the spectral distribution of random Wigner matrix ensembles (such as the Gaussian Unitary Ensemble), as well as iid matrix ensembles. The text is largely self-contained and starts with a review of relevant aspects of probability theory and linear algebra. With over 200 exercises, the book is suitable as an introductory text for beginning graduate students seeking to enter the field.},
+author = {Tao, Terence},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/Topics in random matrix theory.pdf:pdf},
+isbn = {978-0-8218-7430-1},
+journal = {AMS Graduate Studies in Mathematics},
+pages = {1----282},
+title = {{Topics in Random Matrix Theory}},
+volume = {123},
+year = {2012}
+}
+@article{Lei2020,
+author = {Lei, Yanzhe Murray},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/Data Privacy/Privacy-Preserving Personalized Revenue Management.pdf:pdf},
+keywords = {data-driven decision making,optimization,personalized pricing and assortment,privacy},
+pages = {1--31},
+title = {{Privacy-Preserving Personalized Revenue Management}},
+year = {2020}
+}
+@article{Basu2019,
+abstract = {We introduce a number of privacy definitions for the multi-armed bandit problem, based on differential privacy. We relate them through a unifying graphical model representation and connect them to existing definitions. We then derive and contrast lower bounds on the regret of bandit algorithms satisfying these definitions. We show that for all of them, the learner's regret is increased by a multiplicative factor dependent on the privacy level ǫ, but that the dependency is weaker when we do not require local differential privacy for the rewards.},
+archivePrefix = {arXiv},
+arxivId = {1905.12298},
+author = {Basu, Debabrota and Dimitrakakis, Christos and Tossou, Aristide},
+eprint = {1905.12298},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.22/Privacy in Multi-armed Bandits- Fundamental Definitions and Lower Bounds.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--27},
+title = {{Differential privacy for multi-armed bandits: What is it and what is its cost?}},
+year = {2019}
+}
+@article{Bastani2017,
+abstract = {The contextual bandit literature has traditionally focused on algorithms that address the exploration-exploitation tradeoff. In particular, greedy algorithms that exploit current estimates without any exploration may be sub-optimal in general. However, exploration-free greedy algorithms are desirable in practical settings where exploration may be costly or unethical (e.g., clinical trials). Surprisingly, we find that a simple greedy algorithm can be rate-optimal (achieves asymptotically optimal regret) if there is sufficient randomness in the observed contexts (covariates). We prove that this is always the case for a two-armed bandit under a general class of context distributions that satisfy a condition we term covariate diversity. Furthermore, even absent this condition, we show that a greedy algorithm can be rate optimal with positive probability. Thus, standard bandit algorithms may unnecessarily explore. Motivated by these results, we introduce Greedy-First, a new algorithm that uses only observed contexts and rewards to determine whether to follow a greedy algorithm or to explore. We prove that this algorithm is rate-optimal without any additional assumptions on the context distribution or the number of arms. Extensive simulations demonstrate that Greedy-First successfully reduces exploration and outperforms existing (exploration-based) contextual bandit algorithms such as Thompson sampling or upper confidence bound (UCB).},
+archivePrefix = {arXiv},
+arxivId = {1704.09011},
+author = {Bastani, Hamsa and Bayati, Mohsen and Khosravi, Khashayar},
+doi = {10.1287/mnsc.2020.3605},
+eprint = {1704.09011},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/Interest/Mostly Exploration-Free Algorithms for Contextual Bandits.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Contextual bandit,Exploration-exploitation,Greedy algorithm,Sequential decision-making},
+pages = {1--62},
+title = {{Mostly exploration-free algorithms for contextual bandits}},
+year = {2017}
+}
+@article{Hao2020,
+author = {Hao, Botao and Wang, Mengdi},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/Lasso Bandit/High-Dimensional Sparse Linear Bandits.pdf:pdf},
+number = {NeurIPS},
+title = {{High-Dimensional Sparse Linear Bandits}},
+year = {2020}
+}
+@article{,
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.11/Minimax lower bound in bandit learning 3.pdf:pdf},
+pages = {1--2},
+title = {{Privagtaeyhlit enimgliuearyit s- parse p.cn}}
+}
+@article{Hartog1961,
+author = {Hartog, E. and Moreines, H.},
+doi = {10.4271/610369},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.2/Using Confidence Bounds for Exploitation-Exploration Trade-offs.pdf:pdf},
+issn = {26883627},
+journal = {SAE Technical Papers},
+keywords = {bandit problem,exploitation-exploration,learning,linear value function,online learning,reinforcement},
+pages = {397--422},
+title = {{New techniques in automatic flight control system design}},
+volume = {3},
+year = {1961}
+}
+@article{Wang2019,
+author = {Wang, Di and Xu, Jinhui},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/On Sparse Linear Regression in the Local Differential Privacy Model.pdf:pdf},
+title = {{On Sparse Linear Regression in the Local Differential Privacy Model}},
+year = {2019}
+}
+@article{Kumar2019,
+abstract = {Differential privacy is concerned about the prediction quality while measuring the privacy impact on individuals whose information is contained in the data. We consider differentially private risk minimization problems with regularizers that induce structured sparsity. These regularizers are known to be convex but they are often non-differentiable. We analyze the standard differentially private algorithms, such as output perturbation, Frank-Wolfe and objective perturbation. Output perturbation is a differentially private algorithm that is known to perform well for minimizing risks that are strongly convex. Previous works have derived excess risk bounds that are independent of the dimensionality. In this paper, we assume a particular class of convex but non-smooth regularizers that induce structured sparsity and loss functions for generalized linear models. We also consider differentially private Frank-Wolfe algorithms to optimize the dual of the risk minimization problem. We derive excess risk bounds for both these algorithms. Both the bounds depend on the Gaussian width of the unit ball of the dual norm. We also show that objective perturbation of the risk minimization problems is equivalent to the output perturbation of a dual optimization problem. This is the first work that analyzes the dual optimization problems of risk minimization problems in the context of differential privacy.},
+archivePrefix = {arXiv},
+arxivId = {1905.04873},
+author = {Kumar, K. S.Sesh and Deisenroth, Marc Peter},
+eprint = {1905.04873},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/Differentially Private Empirical Risk Minimization.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {classification,empirical risk minimization,optimization,privacy,support vector ma-},
+pages = {1069--1109},
+title = {{Differentially Private Empirical Risk Minimization with Sparsity-Inducing Norms}},
+volume = {12},
+year = {2019}
+}
+@article{Kifer2012,
+abstract = {We consider differentially private algorithms for convex empirical risk minimization (ERM). Differential privacy (Dwork et al., 2006b) is a recently introduced notion of privacy which guarantees that an algorithm's output does not depend on the data of any individual in the dataset. This is crucial in fields that handle sensitive data, such as genomics, collaborative filtering, and economics. Our motivation is the design of private algorithms for sparse learning problems, in which one aims to find solutions (e.g., regression parameters) with few non-zero coefficients. To this end: (a)We significantly extend the analysis of the "objective perturbation" algorithm of Chaudhuri et al. (2011) for convex ERM problems. We show that their method can be modified to use less noise (be more accurate), and to apply to problems with hard constraints and non-differentiable regularizers. We also give a tighter, data-dependent analysis of the additional error introduced by their method. A key tool in our analysis is a new nontrivial limit theorem for differential privacy which is of independent interest: if a sequence of differentially private algorithms converges, in a weak sense, then the limit algorithm is also differentially private. In particular, our methods give the best known algorithms for differentially private linear regression. These methods work in settings where the number of parameters p is less than the number of samples n. (b)We give the first two private algorithms for sparse regression problems in high-dimensional settings, where p is much larger than n. We analyze their performance for linear regression: under standard assumptions on the data, our algorithms have vanishing empirical risk for n = poly(s; log p) when there exists a good regression vector with s nonzero coefficients. Our algorithms demonstrate that randomized algorithms for sparse regression problems can be both stable and accurate - A combination which is impossible for deterministic algorithms. {\textcopyright} 2012 D. Kifer, A. Smith {\&} A. Thakurta.},
+author = {Kifer, Daniel and Smith, Adam and Thakurta, Abhradeep},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.17/Private Convex Empirical Risk Minimization and High-dimensional Regression.pdf:pdf},
+issn = {15337928},
+journal = {Journal of Machine Learning Research},
+pages = {1--40},
+title = {{Private convex empirical risk minimization and high-dimensional regression}},
+volume = {23},
+year = {2012}
+}
+@article{Ren2020a,
+abstract = {We study the problem of dynamic batch learning in high-dimensional sparse linear contextual bandits, where a decision maker, under a given maximum-number-of-batch constraint and only able to observe rewards at the end of each batch, can dynamically decide how many individuals to include in the next batch (at the end of the current batch) and what personalized action-selection scheme to adopt within each batch. Such batch constraints are ubiquitous in a variety of practical contexts, including personalized product offerings in marketing and medical treatment selection in clinical trials. We characterize the fundamental learning limit in this problem via a regret lower bound and provide a matching upper bound (up to log factors), thus prescribing an optimal scheme for this problem. To the best of our knowledge, our work provides the first inroad into a theoretical understanding of dynamic batch learning in high-dimensional sparse linear contextual bandits. Notably, even a special case of our result (when no batch constraint is present) yields the first minimax optimal {\~{O}}(√s0T) regret bound for standard online learning in high-dimensional linear contextual bandits (for the no-margin case), where s0 is the sparsity parameter (or an upper bound thereof) and T is the learning horizon. This result—both that {\~{O}}(√s0T) is achievable and that $\Omega$(√s0T) is a lower bound—appears to be unknown in the emerging literature of high-dimensional contextual bandits.},
+archivePrefix = {arXiv},
+arxivId = {2008.11918},
+author = {Ren, Zhimei and Zhou, Zhengyuan},
+eprint = {2008.11918},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.1.26/Dynamic Batch Learning in High-Dimensional Sparse Linear Contextual Bandits-Zhipeng's MacBook Pro.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Contextual bandits,Dynamic batch learning,High-dimensional statistics,LASSO,Sparsity},
+pages = {1--33},
+title = {{Dynamic batch learning in high-dimensional sparse linear contextual bandits}},
+year = {2020}
+}
+@article{Shariff2018,
+abstract = {We study the contextual linear bandit problem, a version of the standard stochastic multi-armed bandit (MAB) problem where a learner sequentially selects actions to maximize a reward which depends also on a user provided per-round context. Though the context is chosen arbitrarily or adversarially, the reward is assumed to be a stochastic function of a feature vector that encodes the context and selected action. Our goal is to devise private learners for the contextual linear bandit problem. We first show that using the standard definition of differential privacy results in linear regret. So instead, we adopt the notion of joint differential privacy, where we assume that the action chosen on day t is only revealed to user t and thus needn't be kept private that day, only on following days. We give a general scheme converting the classic linear-UCB algorithm into a joint differentially private algorithm using the tree-based algorithm [10, 18]. We then apply either Gaussian noise or Wishart noise to achieve joint-differentially private algorithms and bound the resulting algorithms' regrets. In addition, we give the first lower bound on the additional regret any private algorithms for the MAB problem must incur.},
+archivePrefix = {arXiv},
+arxivId = {1810.00068},
+author = {Shariff, Roshan and Sheffet, Or},
+eprint = {1810.00068},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.1/Differentially Private Contextual Linear Bandits-Zhipeng's MacBook Pro.pdf:pdf},
+issn = {10495258},
+journal = {Advances in Neural Information Processing Systems},
+pages = {4296--4306},
+title = {{Differentially private contextual linear bandits}},
+volume = {2018-December},
+year = {2018}
+}
+@article{Raghavan2018,
+abstract = {Online learning algorithms, widely used to power search and content optimization on the web, must balance exploration and exploitation, potentially sacrificing the experience of current users in order to gain information that will lead to better decisions in the future. Recently, concerns have been raised about whether the process of exploration could be viewed as unfair, placing too much burden on certain individuals or groups. Motivated by these concerns, we initiate the study of the externalities of exploration-the undesirable side effects that the presence of one party may impose on another-under the linear contextual bandits model. We introduce the notion of a group externality, measuring the extent to which the presence of one population of users (the majority) impacts the rewards of another (the minority). We show that this impact can, in some cases, be negative, and that, in a certain sense, no algorithm can avoid it. We then move on to study externalities at the individual level, interpreting the act of exploration as an externality imposed on the current user of a system by future users. This drives us to ask under what conditions inherent diversity in the data makes explicit exploration unnecessary. We build on a recent line of work on the smoothed analysis of the greedy algorithm that always chooses the action that currently looks optimal. We improve on prior results to show that a greedy approach almost matches the best possible Bayesian regret rate of any other algorithm on the same problem instance whenever the diversity conditions hold, and that this regret is at most {\~{O}}(T 1/3). Returning to group-level effects, we show that under the same conditions, negative group externalities essentially vanish if one runs the greedy algorithm. Together, our results uncover a sharp contrast between the high externalities that exist in the worst case, and the ability to remove all externalities if the data is sufficiently diverse.},
+archivePrefix = {arXiv},
+arxivId = {1806.00543},
+author = {Raghavan, Manish and Slivkins, Aleksandrs and Vaughan, Jennifer Wortman and Wu, Zhiwei Steven},
+eprint = {1806.00543},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.10/The Externalities of Exploration and How Data Diversity Helps Exploitation.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{The externalities of exploration and how data diversity helps exploitation}},
+year = {2018}
+}
+
+
+
+@article{Kirschner2018,
+abstract = {In the stochastic bandit problem, the goal is to maximize an unknown function via a sequence of noisy evaluations. Typically, the observation noise is assumed to be independent of the evaluation point and to satisfy a tail bound uniformly on the domain; a restrictive assumption for many applications. In this work, we consider bandits with heteroscedastic noise, where we explicitly allow the noise distribution to depend on the evaluation point. We show that this leads to new trade-offs for information and regret, which are not taken into account by existing approaches like upper confidence bound algorithms (UCB) or Thompson Sampling. To address these shortcomings, we introduce a frequentist regret analysis framework, that is similar to the Bayesian framework of Russo and Van Roy (2014), and we prove a new high-probability regret bound for general, possibly randomized policies, which depends on a quantity we refer to as regret-information ratio. From this bound, we define a frequentist version of Information Directed Sampling (IDS) to minimize the regret-information ratio over all possible action sampling distributions. This further relies on concentration inequalities for online least squares regression in separable Hilbert spaces, which we generalize to the case of heteroscedastic noise. We then formulate several variants of IDS for linear and reproducing kernel Hilbert space response functions, yielding novel algorithms for Bayesian optimization. We also prove frequentist regret bounds, which in the homoscedastic case recover known bounds for UCB, but can be much better when the noise is heteroscedastic. Empirically, we demonstrate in a linear setting with heteroscedastic noise, that some of our methods can outperform UCB and Thompson Sampling, while staying competitive when the noise is homoscedastic.},
+archivePrefix = {arXiv},
+arxivId = {1801.09667},
+author = {Kirschner, Johannes and Krause, Andreas},
+eprint = {1801.09667},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.21/Information Directed Sampling and Bandits with Heteroscedastic Noise.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--27},
+title = {{Information directed sampling and bandits with heteroscedastic noise}},
+volume = {75},
+year = {2018}
+}
+
+@article{Russo2018,
+abstract = {We propose information-directed sampling-a new approach to online optimization problems in which a decision maker must balance between exploration and exploitation while learning from partial feedback. Each action is sampled in a manner that minimizes the ratio between squared expected single-period regret and a measure of information gain: the mutual information between the optimal action and the next observation. We establish an expected regret bound for information-directed sampling that applies across a very general class of models and scales with the entropy of the optimal action distribution. We illustrate through simple analytic examples how information-directed sampling accounts for kinds of information that alternative approaches do not adequately address and that this can lead to dramatic performance gains. For the widely studied Bernoulli, Gaussian, and linear bandit problems, we demonstrate state-of-the-art simulation performance.},
+archivePrefix = {arXiv},
+arxivId = {1403.5556},
+author = {Russo, Daniel and {Van Roy}, Benjamin},
+doi = {10.1287/opre.2017.1663},
+eprint = {1403.5556},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.21/Learning to Optimize via Information-Directed Sampling.pdf:pdf},
+isbn = {0000000159},
+issn = {15265463},
+journal = {Operations Research},
+keywords = {Exploration/exploitation,Information theory,Multi-armed bandit,Online optimization},
+number = {1},
+pages = {230--252},
+title = {{Learning to optimize via information-directed sampling}},
+volume = {66},
+year = {2018}
+}
+@article{Liu2020,
+abstract = {We study two-sided matching markets in which one side of the market (the players) does not have a priori knowledge about its preferences for the other side (the arms) and is required to learn its preferences from experience. Also, we assume the players have no direct means of communication. This model extends the standard stochastic multi-armed bandit framework to a decentralized multiple player setting with competition. We introduce a new algorithm for this setting that, over a time horizon {\$}T{\$}, attains {\$}\backslashmathcal{\{}O{\}}(\backslashlog(T)){\$} stable regret when preferences of the arms over players are shared, and {\$}\backslashmathcal{\{}O{\}}(\backslashlog(T){\^{}}2){\$} regret when there are no assumptions on the preferences on either side.},
+archivePrefix = {arXiv},
+arxivId = {2012.07348},
+author = {Liu, Lydia T. and Ruan, Feng and Mania, Horia and Jordan, Michael I.},
+eprint = {2012.07348},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.25/Bandit Learning in Decentralized Matching Markets.pdf:pdf},
+pages = {1--29},
+title = {{Bandit Learning in Decentralized Matching Markets}},
+url = {http://arxiv.org/abs/2012.07348},
+year = {2020}
+}
+@article{Wang2020,
+abstract = {We consider the stochastic contextual bandit problem under the high dimensional linear model. We focus on the case where the action space is finite and random, with each action associated with a randomly generated contextual covariate. This setting finds essential applications such as personalized recommendation, online advertisement, and personalized medicine. However, it is very challenging as we need to balance exploration and exploitation. We propose doubly growing epochs and estimating the parameter using the best subset selection method, which is easy to implement in practice. This approach achieves Orps?Tq regret with high probability, which is nearly independent in the “ambient” regression model dimension d. We further attain a sharper Orp?sTq regret by using the SUPLINUCB framework and match the minimax lower bound of low-dimensional linear stochastic bandit problems. Finally, we conduct extensive numerical experiments to demonstrate the applicability and robustness of our algorithms empirically.},
+archivePrefix = {arXiv},
+arxivId = {2009.02003},
+author = {Wang, Yining and Chen, Yi and Fang, Ethan X. and Wang, Zhaoran and Li, Runze},
+eprint = {2009.02003},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.25/Nearly Dimension-Independent Sparse Linear Bandit over Small Action Spaces via Best Subset Selection.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Best subset selection,High-dimensional models,Regret analysis,Stochastic bandit},
+title = {{Nearly dimension-independent sparse linear bandit over small action spaces via best subset selection}},
+year = {2020}
+}
+@article{Wang2020a,
+abstract = {We propose a novel online regularization scheme for revenue-maximization in high-dimensional dynamic pricing algorithms. The online regularization scheme equips the proposed optimistic online regularized maximum likelihood pricing (OORMLP) algorithm with three major advantages: encode market noise knowledge into pricing process optimism; empower online statistical learning with always-validity over all decision points; envelop prediction error process with time-uniform non-asymptotic oracle inequalities. This type of non-asymptotic inference results allows us to design safer and more robust dynamic pricing algorithms in practice. In theory, the proposed OORMLP algorithm exploits the sparsity structure of high-dimensional models and obtains a logarithmic regret in a decision horizon. These theoretical advances are made possible by proposing an optimistic online LASSO procedure that resolves dynamic pricing problems at the process level, based on a novel use of non-asymptotic martingale concentration. In experiments, we evaluate OORMLP in different synthetic pricing problem settings and observe that OORMLP performs better than RMLP proposed in [13].},
+archivePrefix = {arXiv},
+arxivId = {2007.02470},
+author = {Wang, Chi Hua and Sun, Will Wei and Wang, Zhanyu and Cheng, Guang},
+eprint = {2007.02470},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.28/Online Regularization for High-Dimensional Dynamic Pricing Algorithms.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{Online Regularization for High-Dimensional Dynamic Pricing Algorithms}},
+year = {2020}
+}
+@article{Wang2020b,
+abstract = {In this paper, we propose a novel perturbation-based exploration method in bandit algorithms with bounded or unbounded rewards, called residual bootstrap exploration (ReBoot). The ReBoot enforces exploration by injecting data-driven randomness through a residual-based perturbation mechanism. This novel mechanism captures the underlying distributional properties of fitting errors, and more importantly boosts exploration to escape from suboptimal solutions (for small sample sizes) by inflating variance level in an unconventional way. In theory, with appropriate variance inflation level, ReBoot provably secures instance-dependent logarithmic regret in Gaussian multi-armed bandits. We evaluate the ReBoot in different synthetic multi-armed bandits problems and observe that the ReBoot performs better for unbounded rewards and more robustly than Giro (Kveton et al., 2018) and PHE (Kveton et al., 2019), with comparable computational efficiency to the Thompson sampling method.},
+archivePrefix = {arXiv},
+arxivId = {2002.08436},
+author = {Wang, Chi Hua and Yu, Yang and Hao, Botao and Cheng, Guang},
+eprint = {2002.08436},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.28/Residual Bootstrap Exploration for Bandit Algorithms.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{Residual bootstrap exploration for bandit algorithms}},
+year = {2020}
+}
+@article{Lattimore2017,
+abstract = {Stochastic linear bandits are a natural and simple generalisation of finite-armed bandits with numerous practical applications. Current approaches focus on generalising existing techniques for finite-armed bandits, notably the optimism principle and Thompson sampling. Prior analysis has mostly focussed on the worst-case setting. We analyse the asymptotic regret and show matching upper and lower bounds on what is achievable. Surprisingly, our results show that no algorithm based on optimism or Thompson sampling will ever achieve the optimal rate. In fact, they can be arbitrarily far from optimal, even in very simple cases. This is a disturbing result because these techniques are standard tools that are widely used for sequential optimisation, for example, generalised linear bandits and reinforcement learning.},
+archivePrefix = {arXiv},
+arxivId = {1610.04491},
+author = {Lattimore, Tor and Szepesv{\'{a}}ri, Csaba},
+eprint = {1610.04491},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.28/The End of Optimism? An Asymptotic Analysis of Finite-Armed Linear Bandits.pdf:pdf},
+journal = {Proceedings of the 20th International Conference on Artificial Intelligence and Statistics, AISTATS 2017},
+title = {{The end of optimism? An asymptotic analysis of finite-armed linear bandits}},
+year = {2017}
+}
+@article{Hamidi2020,
+abstract = {In this paper we study the well-known stochastic linear bandit problem where a decision-maker sequentially chooses among a set of given actions in Rd, observes their noisy reward, and aims to maximize her cumulative expected reward over a horizon of length T. We introduce a general family of algorithms for the problem and prove that they are rate optimal. We also show that several well-known algorithms for the problem such as optimism in the face of uncertainty linear bandit (OFUL) and Thompson sampling (TS) are special cases of our family of algorithms. Therefore, we obtain a unified proof of rate optimality for both of these algorithms. Our results include both adversarial action sets (when actions are potentially selected by an adversary) and stochastic action sets (when actions are independently drawn from an unknown distribution). In terms of regret, our results apply to both Bayesian and worst-case regret settings. Our new unified analysis technique also yields a number of new results and solves two open problems known in the literature. Most notably, (1) we show that TS can incur a linear worst-case regret, unless it uses inflated (by a factor of √d) posterior variances at each step. This shows that the best known worst-case regret bound for TS, that is given by [AG13, AL+17] and is worse (by a factor of √d) than the best known Bayesian regret bound given by [RVR14] for TS, is tight. This settles an open problem stated in [RRK+18]. (2) Our proof also shows that TS can incur a linear Bayesian regret if it does not use the correct prior or noise distribution. (3) Under a generalized gap assumption and a margin condition, as in [GZ13], we obtain a poly-logarithmic (in T) regret bound for OFUL and TS in the stochastic setting. The result for OFUL resolves an open problem from [DHK08].},
+archivePrefix = {arXiv},
+arxivId = {2002.05152},
+author = {Hamidi, Nima and Bayati, Mohsen},
+eprint = {2002.05152},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.8/A General Framework to Analyze Stochastic Linear Bandit.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+number = {2019},
+title = {{A general framework to analyze stochastic linear bandit}},
+volume = {2020},
+year = {2020}
+}
+@article{Hamidi2020a,
+author = {Hamidi, Nima and Bayati, Mohsen},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.8/Toward Better Use of Data in Contextual and Linear Bandits.pdf:pdf},
+title = {{Toward Better Use of Data in Contextual and Linear Bandits Confidence-based Policies}},
+year = {2020}
+}
+@article{Kontorovich2014,
+abstract = {We prove an extension of McDiarmid's inequality for metric spaces with unbounded diame-ter. To this end, we introduce the notion of the subgaussian diameter, which is a distribution- dependent refinement of the metric diameter. Our technique provides an alternative approach to that of Kutin and Niyogi's method of weakly difference-bounded functions, and yields non- trivial, dimension-free results in some interesting cases where the former does not. As an application, we give apparently the first generalization bound in the algorithmic stability setting that holds for unbounded loss functions. This yields a novel risk bound for some regularized metric regression algorithms. We give two extensions of the basic concentration result. The first enables one to replace the independence assumption by appropriate strong mixing. The second generalizes the subgaussian technique to other Orlicz norms.},
+archivePrefix = {arXiv},
+arxivId = {1309.1007},
+author = {Kontorovich, Aryeh},
+eprint = {1309.1007},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.12/Concentration in unbounded metric spaces and algorithmic stability.pdf:pdf},
+isbn = {9781634393973},
+journal = {31st International Conference on Machine Learning, ICML 2014},
+number = {1},
+pages = {1185--1195},
+title = {{Concentration in unbounded metric spaces and algorithmic stability}},
+volume = {2},
+year = {2014}
+}
+@article{Cheung2019,
+abstract = {We introduce data-driven decision-making algorithms that achieve state-of-The-Art dynamic regret bounds for non-stationary bandit settings. These settings capture applications such as advertisement allocation, dynamic pricing, and traffic network routing in changing environments. We show how the difficulty posed by the (unknown a priori and possibly adversarial) non-stationarity can be overcome by an unconventional marriage between stochastic and adversarial bandit learning algorithms. Our main contribution is a general algorithmic recipe for a wide variety of non-stationary bandit problems. Speciffically, we design and analyze the sliding window-upper confidence bound algorithm that achieves the optimal dynamic regret bound for each of the settings when we know the respective underlying variation budget, which quantifies the total amount of temporal variation of the latent environments. Boosted by the novel bandit-over-bandit framework that adapts to the latent changes, we can further enjoy the (nearly) optimal dynamic regret bounds in a (surprisingly) parameter-free manner. In addition to the classical exploration-exploitation trade-o, our algorithms leverage the power of the $\backslash$forgetting principle" in the learning processes, which is vital in changing environments. Our extensive numerical experiments on both synthetic and real world online auto-loan datasets show that our proposed algorithms achieve superior empirical performance compared to existing algorithms.},
+archivePrefix = {arXiv},
+arxivId = {1903.01461},
+author = {Cheung, Wang Chi and Simchi-Levi, David and Zhu, Ruihao},
+eprint = {1903.01461},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.12/Hedging the Drift- Learning to Optimize under Non-Stationarity.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Data-driven decision-making,Non-stationary bandit optimization,Parameter-free algorithm},
+pages = {1--49},
+title = {{Hedging the Drift: Learning to optimize under non-stationarity}},
+year = {2019}
+}
+@article{Choi2017,
+archivePrefix = {arXiv},
+arxivId = {arXiv:1611.07012v1},
+author = {Choi, Edward and Bahadori, Mohammad Taha and Song, Le and Stewart, Walter F and Sun, Jimeng and Health, Sutter},
+eprint = {arXiv:1611.07012v1},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.12/I MPACT OF R EPRESENTATION L EARNING IN L INEAR BANDITS.pdf:pdf},
+journal = {Iclr2018},
+number = {2016},
+pages = {1--14},
+title = {{H Ealthcare R Epresentation L Earning}},
+year = {2017}
+}
+@article{Banerjee2019,
+abstract = {Several important families of computational and statistical results in machine learning and randomized algorithms rely on uniform bounds on quadratic forms of random vectors or matrices. Such results include the Johnson-Lindenstrauss (J-L) Lemma, the Restricted Isometry Property (RIP), randomized sketching algorithms, and approximate linear algebra. The existing results critically depend on statistical independence, e.g., independent entries for random vectors, independent rows for random matrices, etc., which prevent their usage in dependent or adaptive modeling settings. In this paper, we show that such independence is in fact not needed for such results which continue to hold under fairly general dependence structures. In particular, we present uniform bounds on random quadratic forms of stochastic processes which are conditionally independent and sub-Gaussian given another (latent) process. Our setup allows general dependencies of the stochastic process on the history of the latent process and the latent process to be influenced by realizations of the stochastic process. The results are thus applicable to adaptive modeling settings and also allows for sequential design of random vectors and matrices. We also discuss stochastic process based forms of J-L, RIP, and sketching, to illustrate the generality of the results.},
+archivePrefix = {arXiv},
+arxivId = {1910.04930},
+author = {Banerjee, Arindam and Gu, Qilong and Sivakumar, Vidyashankar and Wu, Zhiwei Steven},
+eprint = {1910.04930},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.12/Random Quadratic Forms with Dependence- Applications to Restricted Isometry and Beyond.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+number = {1},
+pages = {1--39},
+title = {{Random quadratic forms with dependence: Applications to restricted isometry and beyond}},
+year = {2019}
+}
+@article{Sivakumar2020,
+abstract = {Bandit learning algorithms typically involve the balance of exploration and exploitation. However, in many practical applications, worst-case scenarios needing systematic exploration are seldom encountered. In this work, we consider a smoothed setting for structured linear contextual bandits where the adversarial contexts are perturbed by Gaussian noise and the unknown parameter $\theta$∗ has structure, e.g., sparsity, group sparsity, low rank, etc. We propose simple greedy algorithms for both the single- and multi-parameter (i.e., different parameter for each context) settings and provide a unified regret analysis for $\theta$∗ with any assumed structure. The regret bounds are expressed in terms of geometric quantities such as Gaussian widths associated with the structure of $\theta$∗. We also obtain sharper regret bounds compared to earlier work for the unstructured $\theta$∗ setting as a consequence of our improved analysis. We show there is implicit exploration in the smoothed setting where a simple greedy algorithm works.},
+archivePrefix = {arXiv},
+arxivId = {2002.11332},
+author = {Sivakumar, Vidyashankar and Wu, Zhiwei Steven and Banerjee, Arindam},
+eprint = {2002.11332},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.12/Structured Linear Contextual Bandits- A Sharp and Geometric Smoothed Analysis.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--40},
+title = {{Structured Linear Contextual Bandits: A Sharp and Geometric Smoothed Analysis}},
+year = {2020}
+}
+@article{Garcelon2021,
+abstract = {Contextual bandit is a general framework for online learning in sequential decision-making problems that has found application in a large range of domains, including recommendation system, online advertising, clinical trials and many more. A critical aspect of bandit methods is that they require to observe the contexts -- i.e., individual or group-level data -- and the rewards in order to solve the sequential problem. The large deployment in industrial applications has increased interest in methods that preserve the privacy of the users. In this paper, we introduce a privacy-preserving bandit framework based on asymmetric encryption. The bandit algorithm only observes encrypted information (contexts and rewards) and has no ability to decrypt it. Leveraging homomorphic encryption, we show that despite the complexity of the setting, it is possible to learn over encrypted data. We introduce an algorithm that achieves a {\$}\backslashwidetilde{\{}O{\}}(d\backslashsqrt{\{}T{\}}){\$} regret bound in any linear contextual bandit problem, while keeping data encrypted.},
+archivePrefix = {arXiv},
+arxivId = {2103.09927},
+author = {Garcelon, Evrard and Perchet, Vianney and Pirotta, Matteo},
+eprint = {2103.09927},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/2021.3.24/Homomorphically Encrypted Linear Contextual Bandit.pdf:pdf},
+number = {2020},
+pages = {1--36},
+title = {{Homomorphically Encrypted Linear Contextual Bandit}},
+url = {http://arxiv.org/abs/2103.09927},
+year = {2021}
+}
+@article{Polyak1992,
+abstract = {A new recursive algorithm of stochastic approximation type with the averaging of trajectories is investigated. Convergence with probability one is proved for a variety of classical optimization and identification problems. It is also demonstrated for these problems that the proposed algorithm achieves the highest possible rate of convergence.},
+author = {Polyak, B. T. and Juditsky, A. B.},
+doi = {10.1137/0330046},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Acceleration{\_}of{\_}Stochastic{\_}Approximation{\_}by{\_}Averag.pdf:pdf},
+issn = {03630129},
+journal = {SIAM Journal on Control and Optimization},
+keywords = {1,12,14,16,21,29,40,5,62l20,93e10,93e12,ams,and are currently well,approximation originate in the,introduction,mos,optimal algorithms,recursive estimation,stochastic approximation,stochastic optimization,studied,subject classifications,the methods of stochastic,these methods are,works},
+number = {4},
+pages = {838--855},
+title = {{Acceleration of stochastic approximation by averaging}},
+volume = {30},
+year = {1992}
+}
+@article{XU2020,
+author = {XU, Kuang},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Drift Method from Stochastic Networks to Machine Learning.pdf:pdf},
+title = {{Drift Method from Stochastic Networks to Machine Learning}},
+year = {2020}
+}
+@article{Wang2020c,
+abstract = {In this paper, we study the Empirical Risk Minimization (ERM) problem in the non-interactive Local Differential Privacy (LDP) model. Previous research on this problem (Smith et al., 2017) indicates that the sample complexity, to achieve error $\alpha$, needs to be exponentially depending on the dimensionality p for general loss functions. In this paper, we make two attempts to resolve this issue by investigating conditions on the loss functions that allow us to remove such a limit. In our first attempt, we show that if the loss function is (∞, T)-smooth, by using the Bernstein polynomial approximation we can avoid the exponential dependency in the term of $\alpha$. We then propose player-efficient algorithms with 1-bit communication complexity and O(1) computation cost for each player. The error bound of these algorithms is asymptotically the same as the original one. With some additional assumptions, we also give an algorithm which is more efficient for the server. In our second attempt, we show that for any 1-Lipschitz generalized linear convex loss function, there is an (ǫ, $\delta$)-LDP algorithm whose sample complexity for achieving error $\alpha$ is only linear in the dimensionality p. Our results use a polynomial of inner product approximation technique. Finally, motivated by the idea of using polynomial approximation and based on different types of polynomial approximations, we propose (efficient) non-interactive locally differentially private algorithms for learning the set of k-way marginal queries and the set of smooth queries.},
+archivePrefix = {arXiv},
+arxivId = {2011.05934},
+author = {Wang, Di and Gaboardi, Marco and Smith, Adam and Xu, Jinhui},
+eprint = {2011.05934},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Empirical Risk Minimization in the Non-interactive Local Model of Differential Privacy.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Convex Learning,Differential Privacy,Empirical Risk Minimization,Local Differential Privacy,Round Complexity},
+pages = {1--39},
+title = {{Empirical risk minimization in the non-interactive local model of differential privacy}},
+volume = {21},
+year = {2020}
+}
+@article{Smith2017,
+abstract = {Recent large-scale deployments of differentially private algorithms employ the local model for privacy (sometimes called PRAM or randomized response), where data are randomized on each individual's device before being sent to a server that computes approximate, aggregate statistics. The server need not be trusted for privacy, leaving data control in users' hands. For an important class of convex optimization problems (including logistic regression, support vector machines, and the Euclidean median), the best known locally differentially-private algorithms are highly interactive, requiring as many rounds of back and forth as there are users in the protocol. We ask: how much interaction is necessary to optimize convex functions in the local DP model? Existing lower bounds either do not apply to convex optimization, or say nothing about interaction. We provide new algorithms which are either noninteractive or use relatively few rounds of interaction. We also show lower bounds on the accuracy of an important class of noninteractive algorithms, suggesting a separation between what is possible with and without interaction.},
+author = {Smith, Adam and Thakurta, Abhradeep and Upadhyay, Jalaj},
+doi = {10.1109/SP.2017.35},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Is Interaction Necessary for Distributed Private Learning?.pdf:pdf},
+isbn = {9781509055326},
+issn = {10816011},
+journal = {Proceedings - IEEE Symposium on Security and Privacy},
+keywords = {Convex optimization,Differential privacy,Local differential privacy,Oracle complexity},
+pages = {58--77},
+publisher = {IEEE},
+title = {{Is Interaction Necessary for Distributed Private Learning?}},
+year = {2017}
+}
+@article{Bach2011,
+abstract = {We consider the minimization of a convex objective function defined on a Hilbert space, which is only available through unbiased estimates of its gradients. This problem includes standard machine learning algorithms such as kernel logistic regression and least-squares regression, and is commonly referred to as a stochastic approximation problem in the operations research community. We provide a non-asymptotic analysis of the convergence of two well-known algorithms, stochastic gradient descent (a.k.a. Robbins-Monro algorithm) as well as a simple modification where iterates are averaged (a.k.a. Polyak-Ruppert averaging). Our analysis suggests that a learning rate proportional to the inverse of the number of iterations, while leading to the optimal convergence rate in the strongly convex case, is not robust to the lack of strong convexity or the setting of the proportionality constant. This situation is remedied when using slower decays together with averaging, robustly leading to the optimal rate of convergence. We illustrate our theoretical results with simulations on synthetic and standard datasets.},
+author = {Bach, Francis and Moulines, Eric},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Non-Asymptotic Analysis of Stochastic Approximation Algorithms for Machine Learning.pdf:pdf},
+isbn = {9781618395993},
+journal = {Advances in Neural Information Processing Systems 24: 25th Annual Conference on Neural Information Processing Systems 2011, NIPS 2011},
+number = {2},
+pages = {1--9},
+title = {{Non-asymptotic analysis of stochastic approximation algorithms for machine learning}},
+year = {2011}
+}
+@article{Javanmard2017,
+abstract = {We consider a firm that sells a large number of products to its customers in an online fashion. Each product is described by a high dimensional feature vector, and the market value of a product is assumed to be linear in the values of its features. Parameters of the valuation model are unknown and can change over time. The firm sequentially observes a product's features and can use the historical sales data (binary sale/no sale feedbacks) to set the price of current product, with the objective of maximizing the collected revenue. We measure the performance of a dynamic pricing policy via regret, which is the expected revenue loss compared to a clairvoyant that knows the sequence of model parameters in advance. We propose a pricing policy based on projected stochastic gradient descent (PSGD) and characterize its regret in terms of time T, features dimension d, and the temporal variability in the model parameters, $\delta$t. We consider two settings. In the first one, feature vectors are chosen antagonistically by nature and we prove that the regret of PSGD pricing policy is of order O(√T + PTt=1√t$\delta$t). In the second setting (referred to as stochastic features model), the feature vectors are drawn independently from an unknown distribution. We show that in this case, the regret of PSGD pricing policy is of order O(d2 log T + PTt=1 t$\delta$t/d).},
+author = {Javanmard, Adel},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Perishability of Data- Dynamic Pricing under Varying-Coefficient Models.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {dynamic pricing,hypothesis testing,regret,revenue management,stochastic gradient descent,varying-coefficient models},
+pages = {1--31},
+title = {{Perishability of Data: Dynamic Pricing under Varying-Coefficient Models}},
+volume = {18},
+year = {2017}
+}
+@article{Chen2020a,
+abstract = {Online decision making aims to learn the optimal decision rule by making personalized decisions and updating the decision rule recursively. It has become easier than before with the help of big data, but new challenges also come along. Since the decision rule should be updated once per step, an offline update which uses all the historical data is inefficient in computation and storage. To this end, we propose a completely online algorithm that can make decisions and update the decision rule online via stochastic gradient descent. It is not only efficient but also supports all kinds of parametric reward models. Focusing on the statistical inference of online decision making, we establish the asymptotic normality of the parameter estimator produced by our algorithm and the online inverse probability weighted value estimator we used to estimate the optimal value. Online plugin estimators for the variance of the parameter and value estimators are also provided and shown to be consistent, so that interval estimation and hypothesis test are possible using our method. The proposed algorithm and theoretical results are tested by simulations and a real data application to news article recommendation.},
+archivePrefix = {arXiv},
+arxivId = {2010.07341},
+author = {Chen, Haoyu and Lu, Wenbin and Song, Rui},
+doi = {10.1080/01621459.2020.1826325},
+eprint = {2010.07341},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/Statistical Inference for Online Decision Making via Stochastic Gradient Descent.pdf:pdf},
+issn = {1537274X},
+journal = {Journal of the American Statistical Association},
+keywords = {Big data,Epsilon-greedy,Inverse probability weighted estimation,Online decision making,Optimal decision rule,Value function},
+number = {0},
+pages = {1--45},
+publisher = {Taylor {\&} Francis},
+title = {{Statistical Inference for Online Decision Making via Stochastic Gradient Descent}},
+url = {https://doi.org/10.1080/01621459.2020.1826325},
+volume = {0},
+year = {2020}
+}
+@article{Cai2020,
+archivePrefix = {arXiv},
+arxivId = {2011.03900},
+author = {Cai, T. Tony and Wang, Yichen and Zhang, Linjun},
+eprint = {2011.03900},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/temp/The Cost of Privacy in Generalized Linear Models- Algorithms and Minimax Lower Bounds.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Differential privacy,Generalized linear models,High-dimensional data,Optimal rate of convergence,Stein's Lemma},
+pages = {1--56},
+title = {{The cost of privacy in generalized linear models: Algorithms and minimax lower bounds}},
+year = {2020}
+}
+@article{EricWarrenFox2016,
+abstract = {In this paper we propose a new wide class of hypergeometric heavy tailed priors that is given as the convolution of a Student-t density for the location parameter and a Scaled Beta2prior for the squared scale parameter. These priors may have heavier tails than Student-t priors, and the variances have a sensible behaviour both at the origin and at the tail, making it suitable for objective analysis. Since the representa- tion of our proposal is a scale mixture, it is suitable to detect sudden changes in the model. Finally we propose a Gibbs sampler using this new family of priors for modelling outliers and structural breaks in Bayesian dynamic linear models. We demonstrate in a published example, that our proposal is more suitable than the Inverted Gamma's assumption for the variances, which makes very hard to detect structural changes.},
+archivePrefix = {arXiv},
+arxivId = {0000.0000},
+author = {{Eric Warren Fox}, Frederic Paik Schoenberg  and Joshua Seth and Gordon},
+eprint = {0000.0000},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/THE COST OF PRIVACY- OPTIMAL RATES OF CONVERGENCE FOR PARAMETER ESTIMATION WITH DIFFERENTIAL PRIVACY.pdf:pdf},
+isbn = {0090-5364},
+issn = {00905364},
+journal = {Annals of Statistics},
+keywords = {Folded concave penalties,Global optimization,High-dimensional statistical learning,MCP,Nonconvex quadratic programming,SCAD,Sparse recovery},
+number = {2},
+pages = {629--659},
+title = {{a Note on Nonparametric Estimates of Space-Time Hawkes Point Process Models for Earthquake Occurrences}},
+volume = {44},
+year = {2016}
+}
+@article{Duchi2018,
+abstract = {We identify fundamental tradeoffs between statistical utility and privacy under local models of privacy in which data is kept private even from the statistician, providing instance-specic bounds for private estimation and learning problems by developing the local minimax risk. In contrast to approaches based on worst-case (minimax) error, which are conservative, this allows us to evaluate the diculty of individual problem instances and delineate the possibilities for adaptation in private estimation and inference. Our main results show that the local modulus of continuity of the estimand with respect to the variation distance|as opposed to the Hellinger distance central to classical statistics|characterizes rates of convergence under locally private estimation for many notions of privacy, including differential privacy and its relaxations. As consequences of these results, we identify an alternative to the Fisher information for private estimation, giving a more nuanced understanding of the challenges of adaptivity and optimality, and provide new minimax bounds for high-dimensional estimation showing that even interactive locally private procedures suffer poor performance under weak notions of privacy.},
+archivePrefix = {arXiv},
+arxivId = {1806.05756},
+author = {Duchi, John C. and Ruan, Feng},
+eprint = {1806.05756},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/The Right Complexity Measure in Locally Private Estimation- It is not the Fisher Information.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--50},
+title = {{The right complexity measure in locally private estimation: It is not the fisher information}},
+year = {2018}
+}
+@article{Jun2017,
+abstract = {Generalized Linear Bandits (GLBs), a natural extension of the stochastic linear bandits, has been popular and successful in recent years. However, existing GLBs scale poorly with the number of rounds and the number of arms, limiting their utility in practice. This paper proposes new, scalable solutions to the GLB problem in two respects. First, unlike existing GLBs, whose per-time-step space and time complexity grow at least linearly with time t, we propose a new algorithm that performs online computations to enjoy a constant space and time complexity. At its heart is a novel Generalized Linear extension of the Online-to-confidence-set Conversion (GLOC method) that takes any online learning algorithm and turns it into a GLB algorithm. As a special case, we apply GLOC to the online Newton step algorithm, which results in a low-regret GLB algorithm with much lower time and memory complexity than prior work. Second, for the case where the number N of arms is very large, we propose new algorithms in which each next arm is selected via an inner product search. Such methods can be implemented via hashing algorithms (i.e., "hash-amenable") and result in a time complexity sublinear in N. While a Thompson sampling extension of GLOC is hash-amenable, its regret bound for d-dimensional arm sets scales with d3/2, whereas GLOC's regret bound scales with d. Towards closing this gap, we propose a new hash-amenable algorithm whose regret bound scales with d5/4. Finally, we propose a fast approximate hash-key computation (inner product) with a better accuracy than the state-of-the-art, which can be of independent interest. We conclude the paper with preliminary experimental results confirming the merits of our methods.},
+archivePrefix = {arXiv},
+arxivId = {1706.00136},
+author = {Jun, Kwang Sung and Bhargava, Aniruddha and Nowak, Robert and Willett, Rebecca},
+eprint = {1706.00136},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.24/Scalable Generalized Linear Bandits- Online Computation and Hashing.pdf:pdf},
+issn = {10495258},
+journal = {Advances in Neural Information Processing Systems},
+pages = {99--109},
+title = {{Scalable generalized linear bandits: Online computation and hashing}},
+volume = {2017-December},
+year = {2017}
+}
+@article{Kannan2018,
+abstract = {Bandit learning is characterized by the tension between long-term exploration and short-term exploitation. However, as has recently been noted, in settings in which the choices of the learning algorithm correspond to important decisions about individual people (such as criminal recidivism prediction, lending, and sequential drug trials), exploration corresponds to explicitly sacrificing the well-being of one individual for the potential future benefit of others. In such settings, one might like to run a “greedy” algorithm, which always makes the optimal decision for the individuals at hand - but doing this can result in a catastrophic failure to learn. In this paper, we consider the linear contextual bandit problem and revisit the performance of the greedy algorithm. We give a smoothed analysis, showing that even when contexts may be chosen by an adversary, small perturbations of the adversary's choices suffice for the algorithm to achieve “no regret”, perhaps (depending on the specifics of the setting) with a constant amount of initial training data. This suggests that in slightly perturbed environments, exploration and exploitation need not be in conflict in the linear setting.1.},
+archivePrefix = {arXiv},
+arxivId = {1801.03423},
+author = {Kannan, Sampath and Morgenstern, Jamie and Roth, Aaron and Waggoner, Bo and Wu, Zhiwei Steven},
+eprint = {1801.03423},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.3/A Smoothed Analysis of the Greedy Algorithm for the Linear Contextual Bandit Problem.pdf:pdf},
+issn = {10495258},
+journal = {Advances in Neural Information Processing Systems},
+pages = {2227--2236},
+title = {{A smoothed analysis of the greedy algorithm for the linear contextual bandit problem}},
+volume = {2018-December},
+year = {2018}
+}
+@article{Liang2020,
+abstract = {With the development of information technologies and Internet of things (IoT) technologies,there are more and more scenarios under continual monitoring, such as transportation monitoring, disease monitoring, smart infrastructure etc. In these scenarios, how to protect the privacy of continuous sharing data is facing major challenges. Differential privacy is arigorous and provable privacy definition. Earlier research on differential privacy has focused on "one-shot" release on a static dataset. However, differential privacy under continual observation focuses on the continuous computationon the dynamic dataset. Now it has become one of the research hotspots. This study surveys the state-of-the-art techniqueson differential privacy under continual observation, and focuses on summarizing existing schemes that provide event-levelprivacy, user-levelprivacy, and w-event privacy. Following a comprehensive comparison and analysis of existing techniques, further research prospectsare put forward.},
+author = {Liang, Wen Juan and Chen, Hong and Wu, Yun Cheng and Zhao, Dan and Li, Cui Ping},
+doi = {10.13328/j.cnki.jos.006042},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.3/Differential Privacy Under Continual Observation.pdf:pdf},
+isbn = {9781450300506},
+issn = {10009825},
+journal = {Ruan Jian Xue Bao/Journal of Software},
+keywords = {Continual monitoring,Differential privacy,Event-level privacy,User-level privacy,W-event privacy},
+number = {6},
+pages = {1761--1785},
+title = {{Differential Privacy under Continual Observation}},
+volume = {31},
+year = {2020}
+}
+@article{Dubey2020,
+abstract = {The rapid proliferation of decentralized learning systems mandates the need for differentially-private cooperative learning. In this paper, we study this in context of the contextual linear bandit: we consider a collection of agents cooperating to solve a common contextual bandit, while ensuring that their communication remains private. For this problem, we devise $\backslash$textsc{\{}FedUCB{\}}, a multiagent private algorithm for both centralized and decentralized (peer-to-peer) federated learning. We provide a rigorous technical analysis of its utility in terms of regret, improving several results in cooperative bandit learning, and provide rigorous privacy guarantees as well. Our algorithms provide competitive performance both in terms of pseudoregret bounds and empirical benchmark performance in various multi-agent settings.},
+archivePrefix = {arXiv},
+arxivId = {2010.11425},
+author = {Dubey, Abhimanyu and Pentland, Alex},
+eprint = {2010.11425},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.3/Differentially-Private Federated Linear Bandits.pdf:pdf},
+number = {NeurIPS},
+pages = {1--22},
+title = {{Differentially-Private Federated Linear Bandits}},
+url = {http://arxiv.org/abs/2010.11425},
+year = {2020}
+}
+@article{Hannun2019,
+abstract = {Contextual bandits are online learners that, given an input, select an arm and receive a reward for that arm. They use the reward as a learning signal and aim to maximize the total reward over the inputs. Contextual bandits are commonly used to solve recommendation or ranking problems. This paper considers a learning setting in which multiple parties aim to train a contextual bandit together in a private way: the parties aim to maximize the total reward but do not want to share any of the relevant information they possess with the other parties. Specifically, multiple parties have access to (different) features that may benefit the learner but that cannot be shared with other parties. One of the parties pulls the arm but other parties may not learn which arm was pulled. One party receives the reward but the other parties may not learn the reward value. This paper develops a privacy-preserving contextual bandit algorithm that combines secure multi-party computation with a differential private mechanism based on epsilon-greedy exploration in contextual bandits.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1910.05299v3},
+author = {Hannun, Awni and Knott, Brian and Sengupta, Shubho and van der Maaten, Laurens},
+eprint = {arXiv:1910.05299v3},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.3/Privacy-Preserving Multi-Party Contextual Bandits.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{Privacy-preserving contextual bandits}},
+year = {2019}
+}
+@article{Chen2020b,
+abstract = {In this paper, we study Combinatorial Semi-Bandits (CSB) that is an extension of classic Multi-Armed Bandits (MAB) under Differential Privacy (DP) and stronger Local Differential Privacy (LDP) setting. Since the server receives more information from users in CSB, it usually causes additional dependence on the dimension of data, which is a notorious side-effect for privacy preserving learning. However for CSB under two common smoothness assumptions (Kveton et al., 2015; Chen et al., 2016), we show it is possible to remove this side-effect. In detail, for B∞-bounded smooth CSB under either $\epsilon$-LDP or $\epsilon$-DP, we prove the optimal regret bound is $\Theta$(mB∆∞2$\epsilon$2ln T ) or $\Theta$( mB∆∞2$\epsilon$ln T ) respectively, where T is time period, ∆ is the gap of rewards and m is the number of base arms, by proposing novel algorithms and matching lower bounds. For B1-bounded smooth CSB under $\epsilon$-DP, we also prove the optimal regret bound is $\Theta$( mKB∆1 2$\epsilon$ln T ) with both upper bound and lower bound, where K is the maximum number of feedback in each round. All above results nearly match corresponding non-private optimal rates, which imply there is no additional price for (locally) differentially private CSB in above common settings.},
+archivePrefix = {arXiv},
+arxivId = {2006.00706},
+author = {Chen, Xiaoyu and Zheng, Kai and Zhou, Zixin and Yang, Yunchang and Chen, Wei and Wang, Liwei},
+eprint = {2006.00706},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.7/(Locally) Differentially Private Combinatorial Semi-Bandits.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{(Locally) Differentially Private Combinatorial Semi-Bandits}},
+year = {2020}
+}
+@article{Chen2021,
+abstract = {In this paper we study the adversarial combinatorial bandit with a known non-linear reward function, extending existing work on adversarial linear combinatorial bandit. {\{}The adversarial combinatorial bandit with general non-linear reward is an important open problem in bandit literature, and it is still unclear whether there is a significant gap from the case of linear reward, stochastic bandit, or semi-bandit feedback.{\}} We show that, with {\$}N{\$} arms and subsets of {\$}K{\$} arms being chosen at each of {\$}T{\$} time periods, the minimax optimal regret is {\$}\backslashwidetilde\backslashTheta{\_}{\{}d{\}}(\backslashsqrt{\{}N{\^{}}d T{\}}){\$} if the reward function is a {\$}d{\$}-degree polynomial with {\$}d{\textless} K{\$}, and {\$}\backslashTheta{\_}K(\backslashsqrt{\{}N{\^{}}K T{\}}){\$} if the reward function is not a low-degree polynomial. {\{}Both bounds are significantly different from the bound {\$}O(\backslashsqrt{\{}\backslashmathrm{\{}poly{\}}(N,K)T{\}}){\$} for the linear case, which suggests that there is a fundamental gap between the linear and non-linear reward structures.{\}} Our result also finds applications to adversarial assortment optimization problem in online recommendation. We show that in the worst-case of adversarial assortment problem, the optimal algorithm must treat each individual {\$}\backslashbinom{\{}N{\}}{\{}K{\}}{\$} assortment as independent.},
+archivePrefix = {arXiv},
+arxivId = {2101.01301},
+author = {Chen, Xi and Han, Yanjun and Wang, Yining},
+eprint = {2101.01301},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.7/Adversarial Combinatorial Bandits with General Non-linear Reward Functions.pdf:pdf},
+title = {{Adversarial Combinatorial Bandits with General Non-linear Reward Functions}},
+url = {http://arxiv.org/abs/2101.01301},
+year = {2021}
+}
+@article{Srinivas2010,
+abstract = {Many applications require optimizing an unknown, noisy function that is expensive to evaluate. We formalize this task as a multi-armed bandit problem, where the payoff function is either sampled from a Gaussian process (GP) or has low RKHS norm. We resolve the important open problem of deriving regret bounds for this setting, which imply novel convergence rates for GP optimization. We analyze GP-UCB, an intuitive upper-confidence based algorithm, and bound its cumulative regret in terms of maximal information gain, establishing a novel connection between GP optimization and experimental design. Moreover, by bounding the latter in terms of operator spectra, we obtain explicit sublinear regret bounds for many commonly used covariance functions. In some important cases, our bounds have surprisingly weak dependence on the dimensionality. In our experiments on real sensor data, GP-UCB compares favorably with other heuristical GP optimization approaches. Copyright 2010 by the author(s)/owner(s).},
+archivePrefix = {arXiv},
+arxivId = {0912.3995},
+author = {Srinivas, Niranjan and Krause, Andreas and Kakade, Sham and Seeger, Matthias},
+doi = {10.1109/TIT.2011.2182033},
+eprint = {0912.3995},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.9/Gaussian Process Optimization in the Bandit Setting- No Regret and Experimental Design.pdf:pdf},
+isbn = {9781605589077},
+journal = {ICML 2010 - Proceedings, 27th International Conference on Machine Learning},
+pages = {1015--1022},
+title = {{Gaussian process optimization in the bandit setting: No regret and experimental design}},
+year = {2010}
+}
+@article{Kaufmann2018,
+abstract = {This paper presents new deviation inequalities that are valid uniformly in time under adaptive sampling in a multi-armed bandit model. The deviations are measured using the Kullback-Leibler divergence in a given one-dimensional exponential family, and may take into account several arms at a time. They are obtained by constructing for each arm a mixture martingale based on a hierarchical prior, and by multiplying those martingales. Our deviation inequalities allow us to analyze stopping rules based on generalized likelihood ratios for a large class of sequential identification problems. We establish asymptotic optimality of sequential tests generalising the track-and-stop method to problems beyond best arm identification. We further derive sharper stopping thresholds, where the number of arms is replaced by the newly introduced pure exploration problem rank. We construct tight confidence intervals for linear functions and minima/maxima of the vector of arm means.},
+archivePrefix = {arXiv},
+arxivId = {1811.11419},
+author = {Kaufmann, Emilie and Koolen, Wouter M.},
+eprint = {1811.11419},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.9/Mixture Martingales Revisited with Applications to Sequential Tests and Confidence Intervals.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Adaptive sequential testing,Best arm identification,Mixture methods,Multi-armed bandits,Test martingales},
+number = {1},
+pages = {1--38},
+title = {{Mixture martingales revisited with applications to sequential tests and confidence intervals}},
+volume = {9189},
+year = {2018}
+}
+@article{Chu2011,
+abstract = {In this paper we study the contextual bandit problem (also known as the multi-armed bandit problem with expert advice) for linear Payoff functions. For T rounds, K actions, and d dimensional feature vectors, we prove an O(√Td ln 3(KT ln(T)/$\delta$)) regret bound that holds with probability 1-$\delta$ for the simplest known (both conceptually and computationally) efficient upper confidence bound algorithm for this problem. We also prove a lower bound of $\Omega$( √Td) for this setting, matching the upper bound up to logarithmic factors. Copyright 2011 by the authors.},
+author = {Chu, Wei and Li, Lihong and Reyzin, Lev and Schapire, Robert E.},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/Important paper/Contextual Bandits with Linear Payoff Functions.pdf:pdf},
+issn = {15324435},
+journal = {Journal of Machine Learning Research},
+pages = {208--214},
+title = {{Contextual bandits with linear Payoff functions}},
+volume = {15},
+year = {2011}
+}
+
+@article{Zheng2020,
+abstract = {We study locally differentially private (LDP) bandits learning in this paper. First, we propose simple black-box reduction frameworks that can solve a large family of context-free bandits learning problems with LDP guarantee. Based on our frameworks, we can improve previous best results for private bandits learning with one-point feedback, such as private Bandits Convex Optimization etc, and obtain the first results for Bandits Convex Optimization (BCO) with multi-point feedback under LDP. LDP guarantee and black-box nature make our frameworks more attractive in real applications compared with previous specifically designed and relatively weaker differentially private (DP) context-free bandits algorithms. Further, we also extend our algorithm to Generalized Linear Bandits with regret bound {\~{O}}(T3/4/$\epsilon$) under ($\epsilon$,$\delta$)-LDP which is conjectured to be optimal. Note given existing $\Omega$(T) lower bound for DP contextual linear bandits [34], our result shows a fundamental difference between LDP and DP contextual bandits learning.},
+archivePrefix = {arXiv},
+arxivId = {2006.00701},
+author = {Zheng, Kai and Cai, Tianle and Huang, Weiran and Li, Zhenguo and Wang, Liwei},
+eprint = {2006.00701},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/Important paper/Locally Differentially Private (Contextual) Bandits Learning (2021-12-28 11-04-59).pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+number = {NeurIPS},
+pages = {1--20},
+title = {{Locally Differentially Private (Contextual) Bandits Learning}},
+year = {2020}
+}
+
+@article{garcelon2021homomorphically,
+author = {Garcelon, Evrard and Perchet, Vianney and Pirotta, Matteo},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.18/2021.3.24/Homomorphically Encrypted Linear Contextual Bandit.pdf:pdf},
+journal = {arXiv preprint arXiv:2103.09927},
+mendeley-groups = {LDP-Bandit,LDP-Bandit/paper/Encrypted},
+title = {{Homomorphically Encrypted Linear Contextual Bandit}},
+year = {2021}
+}
+
+
+@article{Han2020,
+abstract = {We study the sequential batch learning problem in linear contextual bandits with finite action sets, where the decision maker is constrained to split incoming individuals into (at most) a fixed number of batches and can only observe outcomes for the individuals within a batch at the batch's end. Compared to both standard online contextual bandits learning or offline policy learning in contexutal bandits, this sequential batch learning problem provides a finer-grained formulation of many personalized sequential decision making problems in practical applications, including medical treatment in clinical trials, product recommendation in e-commerce and adaptive experiment design in crowdsourcing. We study two settings of the problem: one where the contexts are arbitrarily generated and the other where the contexts are iid drawn from some distribution. In each setting, we establish a regret lower bound and provide an algorithm, whose regret upper bound nearly matches the lower bound. As an important insight revealed therefrom, in the former setting, we show that the number of batches required to achieve the fully online performance is polynomial in the time horizon, while for the latter setting, a pure-exploitation algorithm with a judicious batch partition scheme achieves the fully online performance even when the number of batches is less than logarithmic in the time horizon. Together, our results provide a near-complete characterization of sequential decision making in linear contextual bandits when batch constraints are present.},
+archivePrefix = {arXiv},
+arxivId = {2004.06321},
+author = {Han, Yanjun and Zhou, Zhengqing and Zhou, Zhengyuan and Blanchet, Jose and Glynn, Peter W. and Ye, Yinyu},
+eprint = {2004.06321},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/Important paper/Sequential Batch Learning in Finite-Action Linear Contextual Bandits.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+title = {{Sequential batch learning in finite-action linear contextual bandits}},
+year = {2020}
+}
+
+
+@article{Abbasi-Yadkori2011,
+abstract = {We improve the theoretical analysis and empirical performance of algorithms for the stochastic multi-armed bandit problem and the linear stochastic multi-armed bandit problem. In particular, we show that a simple modification of Auer's UCB algorithm (Auer, 2002) achieves with high probability constant regret. More importantly, we modify and, consequently, improve the analysis of the algorithm for the for linear stochastic bandit problem studied by Auer (2002), Dani et al. (2008), Rusmevichientong and Tsitsiklis (2010), Li et al. (2010). Our modification improves the regret bound by a logarithmic factor, though experiments show a vast improvement. In both cases, the improvement stems from the construction of smaller confidence sets. For their construction we use a novel tail inequality for vector-valued martingales.},
+author = {Abbasi-Yadkori, Yasin and P{\'{a}}l, D{\'{a}}vid and Szepesv{\'{a}}ri, Csaba},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/HuaweiUB/references of EILLPTIC POTENTIAL LEMMA/Improved Algorithms for Linear Stochastic Bandits.pdf:pdf},
+isbn = {9781618395993},
+journal = {Advances in Neural Information Processing Systems 24: 25th Annual Conference on Neural Information Processing Systems 2011, NIPS 2011},
+pages = {1--19},
+title = {{Improved algorithms for linear stochastic bandits}},
+year = {2011}
+}
+@article{Li2019,
+abstract = {We study the linear contextual bandit problem with finite action sets. When the problem dimension is d, the time horizon is T, and there are n ≤ 2d/2candidate actions per time period, we (1) show that the minimax expected regret is $\Omega$ (√dT log T log n) for every algorithm, and (2) introduce a Variable-Confidence-Level (VCL) SupLinUCB algorithm whose regret matches the lower bound up to iterated logarithmic factors. Our algorithmic result saves two √log T factors from previous analysis, and our information-theoretical lower bound also improves previous results by one √ log T factor, revealing a regret scaling quite different from classical multi-armed bandits in which no logarithmic T term is present in minimax regret (Audibert {\&} Bubeck, 2009). Our proof techniques include variable confidence levels and a careful analysis of layer sizes of SupLinUCB (Chu et al., 2011) on the upper bound side, and delicately constructed adversarial sequences showing the tightness of elliptical potential lemmas on the lower bound side.},
+archivePrefix = {arXiv},
+arxivId = {1904.00242},
+author = {Li, Yingkai and Wang, Yining and Zhou, Yuan},
+eprint = {1904.00242},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/HuaweiUB/references of EILLPTIC POTENTIAL LEMMA/Nearly Minimax-Optimal Regret for Linearly Parameterized Bandits ∗.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+pages = {1--28},
+title = {{Nearly minimax-optimal regret for linearly parameterized bandits}},
+year = {2019}
+}
+@article{Carpentier2020,
+abstract = {This note proposes a new proof and new perspectives on the so-called Elliptical Potential Lemma. This result is important in online learning, especially for linear stochastic bandits. The original proof of the result, however short and elegant, does not give much flexibility on the type of potentials considered and we believe that this new interpretation can be of interest for future research in this field.},
+archivePrefix = {arXiv},
+arxivId = {2010.10182},
+author = {Carpentier, Alexandra and Vernade, Claire and Abbasi-Yadkori, Yasin},
+eprint = {2010.10182},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/HuaweiUB/references of EILLPTIC POTENTIAL LEMMA/The Elliptical Potential Lemma Revisited.pdf:pdf},
+pages = {1--8},
+title = {{The Elliptical Potential Lemma Revisited}},
+url = {http://arxiv.org/abs/2010.10182},
+year = {2020}
+}
+@article{Hamidi2021,
+abstract = {In this note, we introduce a randomized version of the well-known elliptical potential lemma that is widely used in the analysis of algorithms in sequential learning and decision-making problems such as stochastic linear bandits. Our randomized elliptical potential lemma relaxes the Gaussian assumption on the observation noise and on the prior distribution of the problem parameters. We then use this generalization to prove an improved Bayesian regret bound for Thompson sampling for the linear stochastic bandits with changing action sets where prior and noise distributions are general. This bound is minimax optimal up to constants.},
+archivePrefix = {arXiv},
+arxivId = {2102.07987},
+author = {Hamidi, Nima and Bayati, Mohsen},
+eprint = {2102.07987},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/HuaweiUB/references of EILLPTIC POTENTIAL LEMMA/The Randomized Elliptical Potential Lemma with an Application to Linear Thompson Sampling.pdf:pdf},
+pages = {1--11},
+title = {{The Randomized Elliptical Potential Lemma with an Application to Linear Thompson Sampling}},
+url = {http://arxiv.org/abs/2102.07987},
+year = {2021}
+}
+
+@article{Auer2003,
+abstract = {We show how a standard tool from statistics - namely confidence bounds - can be used to elegantly deal with situations which exhibit an exploitation-exploration trade-off. Our technique for designing and analyzing algorithms for such situations is general and can be applied when an algorithm has to make exploitation-versus-exploration decisions based on uncertain information provided by a random process. We apply our technique to two models with such an exploitation-exploration trade-off. For the adversarial bandit problem with shifting our new algorithm suffers only {\~{O}} ((ST) 1/2) regret with high probability over T trials with S shifts. Such a regret bound was previously known only in expectation. The second model we consider is associative reinforcement learning with linear value functions. For this model our technique improves the regret from {\~{O}} (T3/4) to {\~{O}} (T1/2).},
+author = {Auer, Peter},
+doi = {10.1162/153244303321897663},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/ref/linUCB/Using Confidence Bounds for Exploitation-Exploration Trade-offs.pdf:pdf},
+issn = {15324435},
+journal = {Journal of Machine Learning Research},
+keywords = {Bandit Problem,Exploitation-Exploration,Linear Value Function,Online Learning,Reinforcement Learning},
+number = {3},
+pages = {397--422},
+title = {{Using confidence bounds for exploitation-exploration trade-offs}},
+volume = {3},
+year = {2003}
+}
+@book{lattimore2020bandit,
+author = {Lattimore, Tor and Szepesv{\'{a}}ri, Csaba},
+publisher = {Cambridge University Press},
+title = {{Bandit algorithms}},
+year = {2020}
+}
+@article{auer2002using,
+author = {Auer, Peter},
+journal = {Journal of Machine Learning Research},
+number = {Nov},
+pages = {397--422},
+title = {{Using confidence bounds for exploitation-exploration trade-offs}},
+volume = {3},
+year = {2002}
+}
+@article{robbins1952some,
+author = {Robbins, Herbert},
+journal = {Bulletin of the American Mathematical Society},
+number = {5},
+pages = {527--535},
+publisher = {Citeseer},
+title = {{Some aspects of the sequential design of experiments}},
+volume = {58},
+year = {1952}
+}
+@article{berry1985bandit,
+author = {Berry, Donald A and Fristedt, Bert},
+journal = {London: Chapman and Hall},
+number = {71-87},
+pages = {7},
+publisher = {Springer},
+title = {{Bandit problems: sequential allocation of experiments (Monographs on statistics and applied probability)}},
+volume = {5},
+year = {1985}
+}
+@article{agrawal1995sample,
+author = {Agrawal, Rajeev},
+journal = {Advances in Applied Probability},
+pages = {1054--1078},
+publisher = {JSTOR},
+title = {{Sample mean based index policies with O (log n) regret for the multi-armed bandit problem}},
+year = {1995}
+}
+@article{auer2002finite,
+author = {Auer, Peter and Cesa-Bianchi, Nicolo and Fischer, Paul},
+journal = {Machine learning},
+number = {2},
+pages = {235--256},
+publisher = {Springer},
+title = {{Finite-time analysis of the multiarmed bandit problem}},
+volume = {47},
+year = {2002}
+}
+@article{abe2003reinforcement,
+author = {Abe, Naoki and Biermann, Alan W and Long, Philip M},
+journal = {Algorithmica},
+number = {4},
+pages = {263--293},
+publisher = {Springer},
+title = {{Reinforcement learning with immediate rewards and linear hypotheses}},
+volume = {37},
+year = {2003}
+}
+@article{kleinberg2010regret,
+author = {Kleinberg, Robert and Niculescu-Mizil, Alexandru and Sharma, Yogeshwer},
+journal = {Machine learning},
+number = {2},
+pages = {245--272},
+publisher = {Springer},
+title = {{Regret bounds for sleeping experts and bandits}},
+volume = {80},
+year = {2010}
+}
+@inproceedings{abbasi2009forced,
+author = {Abbasi-Yadkori, Yasin and Antos, Andr{\'{a}}s and Szepesv{\'{a}}ri, Csaba},
+booktitle = {COLT Workshop on On-line Learning with Limited Feedback},
+pages = {236},
+title = {{Forced-exploration based algorithms for playing in stochastic linear bandits}},
+volume = {92},
+year = {2009}
+}
+@article{dani2008stochastic,
+author = {Dani, Varsha and Hayes, Thomas P and Kakade, Sham M},
+journal = {COLT},
+pages = {355--366},
+title = {{Stochastic linear optimization under bandit feedback}},
+year = {2008}
+}
+@article{garcelon2021homomorphically,
+author = {Garcelon, Evrard and Perchet, Vianney and Pirotta, Matteo},
+journal = {arXiv preprint arXiv:2103.09927},
+title = {{Homomorphically Encrypted Linear Contextual Bandit}},
+year = {2021}
+}
+
+@inproceedings{abbasi2011improved,
+author = {Abbasi-Yadkori, Yasin and P{\'{a}}l, D{\'{a}}vid and Szepesv{\'{a}}ri, Csaba},
+booktitle = {NIPS},
+pages = {2312--2320},
+title = {{Improved Algorithms for Linear Stochastic Bandits.}},
+volume = {11},
+year = {2011}
+}
+@article{duchi2018minimax,
+author = {Duchi, John C and Jordan, Michael I and Wainwright, Martin J},
+journal = {Journal of the American Statistical Association},
+number = {521},
+pages = {182--201},
+publisher = {Taylor {\&} Francis},
+title = {{Minimax optimal procedures for locally private estimation}},
+volume = {113},
+year = {2018}
+}
+
+@article{Agrawal2013,
+abstract = {Thompson Sampling is one of the oldest heuristics for multi-armed bandit problems. It is a randomized algorithm based on Bayesian ideas, and has recently generated significant interest after several studies demonstrated it to have comparable or better empirical performance compared to the state of the art methods. In this paper, we provide a novel regret analysis for Thompson Sampling that proves the first near-optimal problem-independent bound of O(√NT ln T) on the expected regret of this algorithm. Our novel martingale-based analysis techniques are conceptually simple, and easily extend to distributions other than the Beta distribution. For the version of Thompson Sampling that uses Gaussian priors, we prove a problem-independent bound of O(√NT lnN) on the expected regret, and demonstrate the optimality of this bound by providing a matching lower bound. This lower bound of $\Omega$(√NT lnN) is the first lower bound on the performance of a natural version of Thompson Sampling that is away from the general lower bound of O(√NT) for the multi-armed bandit problem. Our near-optimal problem-independent bounds for Thompson Sampling solve a COLT 2012 open problem of Chapelle and Li. Additionally, our techniques simultaneously provide the optimal problem-dependent bound of (1+$\epsilon$)$\Sigma$iln T/d($\mu$i,$\mu$1) +O(N$\epsilon$2 ) on the expected regret. The optimal problem-dependent regret bound for this problem was first proven recently by Kaufmann et al. [2012b].},
+archivePrefix = {arXiv},
+arxivId = {1209.3353},
+author = {Agrawal, Shipra and Goyal, Navin},
+eprint = {1209.3353},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/ref/thompson/Further Optimal Regret Bounds for Thompson Sampling.pdf:pdf},
+issn = {15337928},
+journal = {Journal of Machine Learning Research},
+mendeley-groups = {LDP-Bandit/paper},
+pages = {99--107},
+title = {{Further optimal regret bounds for thompson sampling}},
+volume = {31},
+year = {2013}
+}
+
+@article{Russo2014,
+abstract = {This paper considers the use of a simple posterior sampling algorithm to balance between exploration and exploitation when learning to optimize actions such as in multiarmed bandit problems. The algorithm, also known as Thompson Sampling and as probability matching, offers significant advantages over the popular upper confidence bound (UCB) approach, and can be applied to problems with finite or infinite action spaces and complicated relationships among action rewards. We make two theoretical contributions. The first establishes a connection between posterior sampling and UCB algorithms. This result lets us convert regret bounds developed for UCB algorithms into Bayesian regret bounds for posterior sampling. Our second theoretical contribution is a Bayesian regret bound for posterior sampling that applies broadly and can be specialized to many model classes. This bound depends on a new notion we refer to as the eluder dimension, which measures the degree of dependence among action rewards. Compared to UCB algorithm Bayesian regret bounds for specific model classes, our general bound matches the best available for linear models and is stronger than the best available for generalized linear models. Further, our analysis provides insight into performance advantages of posterior sampling, which are highlighted through simulation results that demonstrate performance surpassing recently proposed UCB algorithms.},
+archivePrefix = {arXiv},
+arxivId = {1301.2609},
+author = {Russo, Daniel and {Van Roy}, Benjamin},
+doi = {10.1287/moor.2014.0650},
+eprint = {1301.2609},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/ref/thompson/Learning to Optimize via Posterior Sampling.pdf:pdf},
+issn = {15265471},
+journal = {Mathematics of Operations Research},
+keywords = {Multiarmed bandits,Online optimization,Thompson sampling},
+mendeley-groups = {LDP-Bandit/paper},
+number = {4},
+pages = {1221--1243},
+title = {{Learning to optimize via posterior sampling}},
+volume = {39},
+year = {2014}
+}
+
+@article{Kirschner2020a,
+abstract = {Partial monitoring is a rich framework for sequential decision making under uncertainty that generalizes many well known bandit models, including linear, combinatorial and dueling bandits. We introduce information directed sampling (IDS) for stochastic partial monitoring with a linear reward and observation structure. IDS achieves adaptive worst-case regret rates that depend on precise observability conditions of the game. Moreover, we prove lower bounds that classify the minimax regret of all finite games into four possible regimes. IDS achieves the optimal rate in all cases up to logarithmic factors, without tuning any hyper-parameters. We further extend our results to the contextual and the kernelized setting, which significantly increases the range of possible applications.},
+archivePrefix = {arXiv},
+arxivId = {2002.11182},
+author = {Kirschner, Johannes and Lattimore, Tor and Krause, Andreas},
+eprint = {2002.11182},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.2.21/Information Directed Sampling for Linear Partial Monitoring.pdf:pdf},
+issn = {23318422},
+journal = {arXiv},
+keywords = {Bandits,Information Directed Sampling,Linear Partial Monitoring},
+mendeley-groups = {LDP-Bandit,LDP-Bandit/paper,LDP-Bandit/paper/IDS},
+pages = {1--42},
+title = {{Information Directed Sampling for Linear Partial Monitoring}},
+volume = {125},
+year = {2020}
+}
+
+@article{Goldenshluger2013,
+abstract = {We consider a two–armed bandit problem which involves sequen-tial sampling from two non-homogeneous populations. The response in each is determined by a random covariate vector and a vector of parameters whose values are not known a priori. The goal is to maximize cumulative expected reward. We study this problem in a minimax setting, and develop rate-optimal polices that combine my-opic action based on least squares estimates with a suitable " forced sampling " strategy. It is shown that the regret grows logarithmically in the time horizon n and no policy can achieve a slower growth rate over all feasible problem instances. In this setting of linear re-sponse bandits, the identity of the sub-optimal action changes with the values of the covariate vector, and the optimal policy is sub-ject to sampling from the inferior population at a rate that grows like √ n. 1. Introduction. Sequential allocation problems, otherwise known as multi-armed bandit problems, arise frequently in various areas of statistics, adaptive control, marketing, economics and machine learning. The problem can be described as that of choosing between arms of a slot machine, where each time an arm is pulled a random reward which is arm-dependent is realized. The goal is to maximize the cumulative expected reward. Since the mean reward rate for each arm is not known, the gambler is faced with the classical dilemma between exploration and exploitation. The first instance of these sequential allocation problems was introduced by Robbins (1952), and since then numerous variants thereof have been studied extensively in many different contexts; we refer to Berry and Fristedt (1985), Gittins (1989), Lai (2001) and the recent book by Cesa–Bianchi and Lugosi (2006), as well as references therein. A stream of such literature has focused on the characterization of optimal procedures under Bayesian formulations, but the complexity of the problem has led many researchers to seek approximate solutions that perform well in a suitable asymptotic sense;},
+author = {Goldenshluger, Alexander and Zeevi, Assaf},
+doi = {10.1214/11-ssy032},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/LDP-Bandit/ref/greedy/A Linear Response Bandit Problem.pdf:pdf},
+issn = {1946-5238},
+journal = {Stochastic Systems},
+mendeley-groups = {LDP-Bandit/paper/Greedy},
+number = {1},
+pages = {230--261},
+title = {{A linear response bandit problem}},
+volume = {3},
+year = {2013}
+}
+
+
+@article{Slivkins2019,
+abstract = {Multi-armed bandits a simple but very powerful framework for algorithms that make decisions over time under uncertainty. An enormous body of work has accumulated over the years, covered in several books and surveys. This book provides a more introductory, textbook-like treatment of the subject. Each chapter tackles a particular line of work, providing a self-contained, teachable technical introduction and a brief review of the further developments.},
+archivePrefix = {arXiv},
+arxivId = {1904.07272},
+author = {Slivkins, Aleksandrs},
+doi = {10.1561/2200000068},
+eprint = {1904.07272},
+file = {:Users/zhipengliang/Onedrive/OneDrive - HKUST Connect/Paper/LDP (Contextual) Bandit/2021.3.29/Introduction to Multi-Armed Bandits.pdf:pdf},
+issn = {19358245},
+journal = {Foundations and Trends in Machine Learning},
+mendeley-groups = {LDP-Bandit/paper/general},
+number = {1-2},
+pages = {1--286},
+title = {{Introduction to multi-armed bandits}},
+volume = {12},
+year = {2019}
+}
+
+@article{bayati2020unreasonable,
+  title={Unreasonable Effectiveness of Greedy Algorithms in Multi-Armed Bandit with Many Arms},
+  author={Bayati, Mohsen and Hamidi, Nima and Johari, Ramesh and Khosravi, Khashayar},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  year={2020}
+}
+
+@inproceedings{sivakumar2020structured,
+  title={Structured linear contextual bandits: A sharp and geometric smoothed analysis},
+  author={Sivakumar, Vidyashankar and Wu, Steven and Banerjee, Arindam},
+  booktitle={International Conference on Machine Learning},
+  pages={9026--9035},
+  year={2020},
+  organization={PMLR}
+}
+
+@article{yang2020provable,
+  title={Provable Benefits of Representation Learning in Linear Bandits},
+  author={Yang, Jiaqi and Hu, Wei and Lee, Jason D and Du, Simon S},
+  journal={arXiv preprint arXiv:2010.06531},
+  year={2020}
+}
+
+@article{raghavan2020greedy,
+  title={Greedy Algorithm almost Dominates in Smoothed Contextual Bandits},
+  author={Raghavan, Manish and Slivkins, Aleksandrs and Vaughan, Jennifer Wortman and Wu, Zhiwei Steven},
+  journal={arXiv preprint arXiv:2005.10624},
+  year={2020}
+}
+
+@article{ren2020batched,
+  title={Batched Learning in Generalized Linear Contextual Bandits with General Decision Sets},
+  author={Ren, Zhimei and Zhou, Zhengyuan and Kalagnanam, Jayant R},
+  journal={IEEE Control Systems Letters},
+  year={2020},
+  publisher={IEEE}
+}
+
+@inproceedings{toulis2014statistical,
+  title={Statistical analysis of stochastic gradient methods for generalized linear models},
+  author={Toulis, Panagiotis and Airoldi, Edoardo and Rennie, Jason},
+  booktitle={International Conference on Machine Learning},
+  pages={667--675},
+  year={2014},
+  organization={PMLR}
+}
+
+@article{hamidi2019personalizing,
+  title={Personalizing many decisions with high-dimensional covariates},
+  author={Hamidi, Nima and Bayati, Mohsen and Gupta, Kapil},
+  journal={Advances in Neural Information Processing Systems},
+  volume={32},
+  pages={11473--11484},
+  year={2019}
+}
+
+@article{javanmard2016dynamic,
+  title={Dynamic pricing in high-dimensions},
+  author={Javanmard, Adel and Nazerzadeh, Hamid},
+  journal={arXiv preprint arXiv:1609.07574},
+  year={2016}
+}
+
+@article{phillips2015effectiveness,
+  title={The effectiveness of field price discretion: Empirical evidence from auto lending},
+  author={Phillips, Robert and {\c{S}}im{\c{s}}ek, A Serdar and Van Ryzin, Garrett},
+  journal={Management Science},
+  volume={61},
+  number={8},
+  pages={1741--1759},
+  year={2015},
+  publisher={INFORMS}
+}
+
+@article{ban2020personalized,
+  title={Personalized dynamic pricing with machine learning: High dimensional features and heterogeneous elasticity},
+  author={Ban, Gah-Yi and Keskin, N Bora},
+  journal={Forthcoming, Management Science},
+  year={2020}
+}
+
+@article{cheung2018hedging,
+  title={Hedging the drift: Learning to optimize under non-stationarity},
+  author={Cheung, Wang Chi and Simchi-Levi, David and Zhu, Ruihao},
+  journal={Available at SSRN 3261050},
+  year={2018}
+}
+
+@article{besbes2015surprising,
+  title={On the (surprising) sufficiency of linear models for dynamic pricing with demand learning},
+  author={Besbes, Omar and Zeevi, Assaf},
+  journal={Management Science},
+  volume={61},
+  number={4},
+  pages={723--739},
+  year={2015},
+  publisher={INFORMS}
+}
+
+@article{chaudhuri2011differentially,
+  title={Differentially private empirical risk minimization.},
+  author={Chaudhuri, Kamalika and Monteleoni, Claire and Sarwate, Anand D},
+  journal={Journal of Machine Learning Research},
+  volume={12},
+  number={3},
+  year={2011}
+}
+
+@inproceedings{dwork2009differential,
+  title={Differential privacy and robust statistics},
+  author={Dwork, Cynthia and Lei, Jing},
+  booktitle={Proceedings of the forty-first annual ACM symposium on Theory of computing},
+  pages={371--380},
+  year={2009}
+}
+
+@article{wasserman2010statistical,
+  title={A statistical framework for differential privacy},
+  author={Wasserman, Larry and Zhou, Shuheng},
+  journal={Journal of the American Statistical Association},
+  volume={105},
+  number={489},
+  pages={375--389},
+  year={2010},
+  publisher={Taylor \& Francis}
+}
+
+@inproceedings{smith2011privacy,
+  title={Privacy-preserving statistical estimation with optimal convergence rates},
+  author={Smith, Adam},
+  booktitle={Proceedings of the forty-third annual ACM symposium on Theory of computing},
+  pages={813--822},
+  year={2011}
+}
+
+@article{rubinstein2009learning,
+  title={Learning in a large function space: Privacy-preserving mechanisms for SVM learning},
+  author={Rubinstein, Benjamin IP and Bartlett, Peter L and Huang, Ling and Taft, Nina},
+  journal={arXiv preprint arXiv:0911.5708},
+  year={2009}
+}
+
+@article{ding2017collecting,
+  title={Collecting telemetry data privately},
+  author={Ding, Bolin and Kulkarni, Janardhan and Yekhanin, Sergey},
+  journal={arXiv preprint arXiv:1712.01524},
+  year={2017}
+}
+
+@inproceedings{erlingsson2014rappor,
+  title={Rappor: Randomized aggregatable privacy-preserving ordinal response},
+  author={Erlingsson, {\'U}lfar and Pihur, Vasyl and Korolova, Aleksandra},
+  booktitle={Proceedings of the 2014 ACM SIGSAC conference on computer and communications security},
+  pages={1054--1067},
+  year={2014}
+}
+
+@article{tang2017privacy,
+  title={Privacy loss in apple's implementation of differential privacy on macos 10.12},
+  author={Tang, Jun and Korolova, Aleksandra and Bai, Xiaolong and Wang, Xueqiang and Wang, Xiaofeng},
+  journal={arXiv preprint arXiv:1709.02753},
+  year={2017}
+}
+
+@article{abbasi2013online,
+  title={Online learning for linearly parametrized control problems},
+  author={Abbasi-Yadkori, Yasin},
+  year={2013}
+}
+
+@article{hamidi2020toward,
+  title={Toward Better Use of Data in Linear Bandits},
+  author={Hamidi, Nima and Bayati, Mohsen},
+  journal={arXiv preprint arXiv:2002.05152},
+  year={2020}
+}
+
+@article{riquelme2018deep,
+  title={Deep bayesian bandits showdown: An empirical comparison of bayesian deep networks for thompson sampling},
+  author={Riquelme, Carlos and Tucker, George and Snoek, Jasper},
+  journal={arXiv preprint arXiv:1802.09127},
+  year={2018}
+}
+
+@inproceedings{wang2020global,
+  title={Global and Local Differential Privacy for Collaborative Bandits},
+  author={Wang, Huazheng and Zhao, Qian and Wu, Qingyun and Chopra, Shubham and Khaitan, Abhinav and Wang, Hongning},
+  booktitle={Fourteenth ACM Conference on Recommender Systems},
+  pages={150--159},
+  year={2020}
+}
+
+@inproceedings{yang2021impact,
+  title={Impact of representation learning in linear bandits},
+  author={Yang, Jiaqi and Hu, Wei and Lee, Jason D and Du, Simon S},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+
+@article{goldenshluger2013linear,
+  title={A linear response bandit problem},
+  author={Goldenshluger, Alexander and Zeevi, Assaf},
+  journal={Stochastic Systems},
+  volume={3},
+  number={1},
+  pages={230--261},
+  year={2013},
+  publisher={INFORMS}
+}
+
+@article{rakhlin2011making,
+  title={Making gradient descent optimal for strongly convex stochastic optimization},
+  author={Rakhlin, Alexander and Shamir, Ohad and Sridharan, Karthik},
+  journal={arXiv preprint arXiv:1109.5647},
+  year={2011}
+}
+
+@inproceedings{chu2011contextual,
+  title={Contextual bandits with linear payoff functions},
+  author={Chu, Wei and Li, Lihong and Reyzin, Lev and Schapire, Robert},
+  booktitle={Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics},
+  pages={208--214},
+  year={2011},
+  organization={JMLR Workshop and Conference Proceedings}
+}
+
+@inproceedings{li2017provably,
+  title={Provably optimal algorithms for generalized linear contextual bandits},
+  author={Li, Lihong and Lu, Yu and Zhou, Dengyong},
+  booktitle={International Conference on Machine Learning},
+  pages={2071--2080},
+  year={2017},
+  organization={PMLR}
+}
+
+@inproceedings{dwork2014analyze,
+  title={Analyze gauss: optimal bounds for privacy-preserving principal component analysis},
+  author={Dwork, Cynthia and Talwar, Kunal and Thakurta, Abhradeep and Zhang, Li},
+  booktitle={Proceedings of the forty-sixth annual ACM symposium on Theory of computing},
+  pages={11--20},
+  year={2014}
+}
+
+@inproceedings{wu2020stochastic,
+  title={Stochastic Linear Contextual Bandits with Diverse Contexts},
+  author={Wu, Weiqiang and Yang, Jing and Shen, Cong},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={2392--2401},
+  year={2020},
+  organization={PMLR}
+}
+
+@inproceedings{zheng2017collect,
+  title={Collect at once, use effectively: Making non-interactive locally private learning possible},
+  author={Zheng, Kai and Mou, Wenlong and Wang, Liwei},
+  booktitle={International Conference on Machine Learning},
+  pages={4130--4139},
+  year={2017},
+  organization={PMLR}
+}
+
+@inproceedings{abadi2016deep,
+  title={Deep learning with differential privacy},
+  author={Abadi, Martin and Chu, Andy and Goodfellow, Ian and McMahan, H Brendan and Mironov, Ilya and Talwar, Kunal and Zhang, Li},
+  booktitle={Proceedings of the 2016 ACM SIGSAC conference on computer and communications security},
+  pages={308--318},
+  year={2016}
+}
+
+@inproceedings{apple17,
+  title={Learning with privacy at scale},
+  author={Apple~Differential~Privacy~Team},
+  year={2017}
+}
+
+@article{bassily2017practical,
+  title={Practical locally private heavy hitters},
+  author={Bassily, Raef and Nissim, Kobbi and Stemmer, Uri and Thakurta, Abhradeep},
+  journal={arXiv preprint arXiv:1707.04982},
+  year={2017}
+}
+
+@inproceedings{dwork2006our,
+  title={Our data, ourselves: Privacy via distributed noise generation},
+  author={Dwork, Cynthia and Kenthapadi, Krishnaram and McSherry, Frank and Mironov, Ilya and Naor, Moni},
+  booktitle={Annual International Conference on the Theory and Applications of Cryptographic Techniques},
+  pages={486--503},
+  year={2006},
+  organization={Springer}
+}
+
+@inproceedings{wang2019sparse,
+  title={On sparse linear regression in the local differential privacy model},
+  author={Wang, Di and Xu, Jinhui},
+  booktitle={International Conference on Machine Learning},
+  pages={6628--6637},
+  year={2019},
+  organization={PMLR}
+}
+
+@inproceedings{smith2017interaction,
+  title={Is interaction necessary for distributed private learning?},
+  author={Smith, Adam and Thakurta, Abhradeep and Upadhyay, Jalaj},
+  booktitle={2017 IEEE Symposium on Security and Privacy (SP)},
+  pages={58--77},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{cormode2018privacy,
+  title={Privacy at scale: Local differential privacy in practice},
+  author={Cormode, Graham and Jha, Somesh and Kulkarni, Tejas and Li, Ninghui and Srivastava, Divesh and Wang, Tianhao},
+  booktitle={Proceedings of the 2018 International Conference on Management of Data},
+  pages={1655--1658},
+  year={2018}
+}
+
+@inproceedings{filippi2010parametric,
+  title={Parametric Bandits: The Generalized Linear Case.},
+  author={Filippi, Sarah and Cappe, Olivier and Garivier, Aur{\'e}lien and Szepesv{\'a}ri, Csaba},
+  booktitle={NIPS},
+  volume={23},
+  pages={586--594},
+  year={2010}
+}
+
+@article{hafner2006if,
+  title={if you liked the movie, a Netflix contest may reward you handsomely},
+  author={Hafner, Katie},
+  journal={New York Times},
+  volume={2},
+  year={2006}
+}
+
+@inproceedings{narayanan2008robust,
+  title={Robust de-anonymization of large sparse datasets},
+  author={Narayanan, Arvind and Shmatikov, Vitaly},
+  booktitle={2008 IEEE Symposium on Security and Privacy (sp 2008)},
+  pages={111--125},
+  year={2008},
+  organization={IEEE}
+}
+
+@incollection{zhu2020deep,
+  title={Deep leakage from gradients},
+  author={Zhu, Ligeng and Han, Song},
+  booktitle={Federated Learning},
+  pages={17--31},
+  year={2020},
+  publisher={Springer}
+}
+
+@inproceedings{abbasi2012online,
+  title={Online-to-confidence-set conversions and application to sparse stochastic bandits},
+  author={Abbasi-Yadkori, Yasin and Pal, David and Szepesvari, Csaba},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={1--9},
+  year={2012},
+  organization={PMLR}
+}
+
+@inproceedings{lattimore2017end,
+  title={The end of optimism? an asymptotic analysis of finite-armed linear bandits},
+  author={Lattimore, Tor and Szepesvari, Csaba},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={728--737},
+  year={2017},
+  organization={PMLR}
+}
+
+@article{yiyun2021,
+  title={Distribution-free Contextual Dynamic Pricing},
+  author={Luo, Yiyun and Sun, Will Wei and Liu, Yufeng},
+  year={2021}
+}
+
+@article{warner1965randomized,
+  title={Randomized response: A survey technique for eliminating evasive answer bias},
+  author={Warner, Stanley L},
+  journal={Journal of the American Statistical Association},
+  volume={60},
+  number={309},
+  pages={63--69},
+  year={1965},
+  publisher={Taylor \& Francis}
+}
+
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
