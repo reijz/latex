@@ -1,0 +1,47 @@
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots,dateplot}
+
+\usepackage{pgfplotstable}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns,shapes.arrows,arrows,shapes}
+\usetikzlibrary{arrows.meta, calc, topaths, positioning, automata}
+\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.17}
+
+\tikzset{
+	cir/.style ={
+	ellipse, %矩形节点
+	minimum width =15pt, %最小宽度
+	minimum height =23pt, %最小高度
+	align=center,
+	text width=20pt,
+	inner sep=2pt, %文字和边框的距离
+	draw=black, %边框颜色}
+	% font=\tiny	
+	}
+}
+
+\tikzset{
+	pcir/.style ={
+	circle, %矩形节点
+	minimum width =15pt, %最小宽度
+	minimum height =15pt, %最小高度
+	align=center,
+	text width=20pt,
+	inner sep=2pt, %文字和边框的距离
+	draw=blue, %边框颜色}
+	% font=\tiny
+	}
+}
+
+\tikzset{
+box/.style ={
+rectangle, %矩形节点
+rounded corners =3pt, %圆角
+minimum width =25pt, %最小宽度
+minimum height =20pt, %最小高度
+inner sep=2pt, %文字和边框的距离
+draw=black %边框颜色}
+}
+}

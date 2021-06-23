@@ -9,7 +9,22 @@
 \usepackage{natbib}
 \bibliographystyle{abbrv}
 
-\input{settings.tex}
+\input{style/formality.tex}
+\input{tikz/setting.tex}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{remark}{Remark}[section]
+
+% setting numbering
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
 
 \title{
   An important and impactful paper
@@ -30,6 +45,7 @@
 \maketitle
 
 \begin{abstract}
+  Brief
 \end{abstract}
 
 \emph{Key words and phrases:} 
@@ -40,12 +56,22 @@
 
 \cite{Erlang1948,Dantzig1955,Dynkin1956,Bellman1957DP,Little1961,Skorokhod1961,McKean1965,Iglehart1965}
 
+\section{Introduction}
+
+\input{tikz/figure-x-y.tex}
+
 \section{Model}
+\begin{lemma}
+	\label{lem:A1}
+    As long as $t>8 \frac{d \log 9 +\log (T/\alpha)}{p_{*}^2}$, the following lower bound
+\end{lemma}
 
-\subsection{A subsection}
+\subsection{Some subsection}
+
+\input{tikz/figure-N-model.tex}
 
 
-\bibliography{library}
+\bibliography{ref}
 
 \appendix
 
