@@ -1021,7 +1021,7 @@
 \def\RUNTITLE#1{\gdef\theRUNTITLE{#1}}\def\theRUNTITLE{Article Short Title}% default
 \def\ECRUNAUTHOR#1{\gdef\theECRUNAUTHOR{#1}}\def\theECRUNAUTHOR{\theRUNAUTHOR}% default
 \def\ECRUNTITLE#1{\gdef\theECRUNTITLE{#1}}\def\theECRUNTITLE{\theRUNTITLE}% default
-\def\ECTYPE#1{\gdef\theECTYPE{#1}}\def\theECTYPE{e-companion to\enspace}% default
+\def\ECTYPE#1{\gdef\theECTYPE{#1}}\def\theECTYPE{e-companion\enspace}% default
 \def\ECAUpunct#1{\gdef\theECAUpunct{#1}}\def\theECAUpunct{:\space}% default
 
 
@@ -1103,21 +1103,23 @@
 % \LRHSecondLine{\fs.7.9.{\theJOURNAL} \theVOLUME(\theNO), \theRUNPAGERANGE,
 %   \copyright\,{\theYEAR}\ INFORMS}% default
 
-% \def\setoddECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
-%   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-%   {\theECRRHFirstLine}&\\ {\theECRRHSecondLine}&  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}\\[-4pt]
-%   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
-%   \end{tabular*}}}
-% \def\setevenECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
-%   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-%   &{\theECLRHFirstLine}\\ \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}&{\theECLRHSecondLine}\\[-4pt]
-%   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
-%   \end{tabular*}}}
+\def\setoddECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
+  \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
+  {\theECRRHFirstLine}&\\ {\theECRRHSecondLine}&  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}\\[-4pt]
+  \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
+  \end{tabular*}}}
+\def\setevenECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
+  \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
+  &{\theECLRHFirstLine}\\ \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}&{\theECLRHSecondLine}\\[-4pt]
+  \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
+  \end{tabular*}}}
 
-% \ECRRHFirstLine{\relax}% default
-% \ECRRHSecondLine{\fs.7.9.{\rm \theECTYPE}{\bf\theECRUNAUTHOR\theECAUpunct}{\it\theECRUNTITLE}}% default
-% \ECLRHFirstLine{\relax}% default
-% \ECLRHSecondLine{\fs.7.9.{\rm \theECTYPE}{\bf\theECRUNAUTHOR\theECAUpunct}{\it\theECRUNTITLE}}% default
+\ECRRHFirstLine{\relax}% default
+\ECRRHSecondLine{\fs.7.9.{\rm \theECTYPE}%{\bf\theECRUNAUTHOR\theECAUpunct}{\it\theECRUNTITLE}
+}% default
+\ECLRHFirstLine{\relax}% default
+\ECLRHSecondLine{\fs.7.9.{\rm \theECTYPE}%{\bf\theECRUNAUTHOR\theECAUpunct}{\it\theECRUNTITLE}
+}% default
 
 
 \if@BLINDREV
