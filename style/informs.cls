@@ -531,8 +531,8 @@
    \@setfontsize\normalsizeXI{11}{12.66}%
    \Dskips{1.0}{0.3}{0.5}{0.6}%
    \let\@listi\@listI
-   \baselineskip20pt plus 1pt minus 1pt
-\@bls=20pt\@em=11pt
+   \baselineskip19pt plus 1pt minus 1pt
+\@bls=19pt\@em=11pt
 \relax}
 
 \newcommand\AAsmallX{%
