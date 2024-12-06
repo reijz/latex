@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%	Author Submission Template for Operations Research (OPRE)
+%%	INFORMS, <informs@informs.org>
+%%	Ver. 1.00, June 2024
+%%  Modified by Jiheng Zhang @ UST
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Use dblanonrev for Double Anonymous Review submission
+% Use sglanonrev for Single Anonymous Review submission
+% For example, submission to INFORMS Mathematics of Operation Research, MOOR will have
+% \documentclass[moor,dblanonrev]{style/informs4}
+%
+% \documentclass[opre,dblanonrev]{style/informs4}
+\documentclass[opre,sglanonrev]{style/informs4}
+% \usepackage{eqndefns-left} % For checking the display equation width and equation environment definitions %
+
+\bibliographystyle{style/informs2014}
+\usepackage{natbib}
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\newblock{\ }%
+ \def\BIBand{and}%
+
+\input{style/formality.tex}
+\input{tikz/setting.tex}
+
+% Load the fix-cm package
+\usepackage{fix-cm}
+% Manually declare missing font shapes if necessary
+\DeclareFontShape{OML}{cmm}{b}{it}{<->cmmib10}{}
+\DeclareFontShape{OMS}{cmsy}{b}{n}{<->cmsy10}{}
+
+%\OneAndAHalfSpacedXI
+\OneAndAHalfSpacedXII % Current default line spacing
+%%\DoubleSpacedXI
+%%\DoubleSpacedXII
+
+%% Setup of the equation numbering system. Outcomment only one.
+%% Preferred default is the first option.
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+
+%% Setup of theorem styles. Outcomment only one.
+%% Preferred default is the first option.
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Lema 1.1, Theorem 1.2)
+\ECRepeatTheorems  %  
+
+% For new submissions, leave this number blank.
+% For revisions, input the manuscript number assigned by the on-line
+% system along with a suffix ".Rx" where x is the revision number.
+% \MANUSCRIPTNO{MOOR-0001-2024.00}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+% Outcomment only when entries are known. Otherwise leave as is and
+%   default values will be used.
+%\setcounter{page}{1}
+%\VOLUME{00}%
+%\NO{0}%
+%\MONTH{Xxxxx}% (month or a similar seasonal id)
+%\YEAR{0000}% e.g., 2005
+%\FIRSTPAGE{000}%
+%\LASTPAGE{000}%
+%\SHORTYEAR{00}% shortened year (two-digit)
+%\ISSUE{0000} %
+%\LONGFIRSTPAGE{0001} %
+%\DOI{10.1287/xxxx.0000.0000}%
+
+% Author's names for the running heads
+% Sample depending on the number of authors;
+% \RUNAUTHOR{Jones}
+% \RUNAUTHOR{Jones and Wilson}
+% \RUNAUTHOR{Jones, Miller, and Wilson}
+% \RUNAUTHOR{Jones et al.} % for four or more authors
+% Enter authors following the given pattern:
+%\RUNAUTHOR{}
+
+% Title or shortened title suitable for running heads. Sample:
+% \RUNTITLE{}
+
+% Enter the full title:
+\TITLE{An important and impactful paper}
+
+\ARTICLEAUTHORS{%
+%\AUTHOR{John Doe,\textsuperscript{a} Jane Smith,\textsuperscript{b}}
+%\AFF{\textsuperscript{a}Department of Industrial Engineering, University of XYZ, \EMAIL{john.doe@xyz.edu; \textsuperscript{b}Department of Computer Science, University of ABC, \EMAIL{jane.smith@abc.edu}} 
+% Enter all authors
+}
+
+\ABSTRACT{
+    % big background
+    Stochastic control in multi-class queueing networks has been extensively studied primarily focusing on minimizing operational costs (e.g., waiting, abandonment). 
+    % what is novel
+    However, in many real-world applications, the system operator must balance the trade-off between waiting costs and maximizing immediate rewards when assigning customers to service units.
+    This necessitates the integration of learning algorithms that focus on maximizing immediate rewards through matching, and stochastic control methods that aim to minimize waiting costs by managing queue dynamics.
+    % what is our model
+    Specifically, we consider a multi-class queueing system where each customer type is associated with a waiting cost and a feature vector. Each service unit consist of multiple idential servers each with a fixed service rate and a parameter. The inner product of the customer feature vector and the server parameter determines the reward when a customer is assigned to a server.
+    % What we do (challenge, results, methodology)
+    When the server parameters are known, we design a priority rule based on fluid approximation and demonstrate its asymptotic optimality, effectively balancing the trade-offs between reward maximization and waiting cost minimization. 
+    When the server parameters are unknown, we incorporate an online learning algorithm into the system control, achieving a regret bound of order $O(\ln T)$.
+    % Numerical experiments
+    Numerical experiments demonstrate the effectiveness of our proposed algorithms in balancing the trade-offs between immediate rewards and waiting costs.
+}%
+
+%\FUNDING{This research was supported by [grant number, funding agency].}
+
+\KEYWORDS{Stochastic control, Queueing network,Uncertainty, Online learning, Optimization} 
+
+%\HISTORY{Received: Month DD, YYYY; Accepted: Month DD, YYYY; Published Online: Month DD, YYYY}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Text of your paper here
+\section{Introduction}
+
+%Motivation
+Queueing control problems are widely studied in stochastic control, with applications in telecommunications, emergency services, project management, and more. In a traditional multi-class queueing control problem, the decision maker must design a priority rule—such as the $c\mu$ rule—to determine which type of customer to serve based on certain exogenous properties of the system. The primary objective is to minimize operational costs, including waiting costs and abandonment.
+
+%Real world 
+
+\cite{Erlang1948,Dantzig1955,Dynkin1956,Bellman1957DP,Little1961,Skorokhod1961,McKean1965,Iglehart1965}
+
+\section{Model}
+
+\input{tikz/figure-x-y.tex}
+
+\section{Conclusion}
+\input{tikz/figure-N-model.tex}
+
+\bibliography{ref}
+
+\ECSwitch
+\ECHead{Proofs}
+
+\section{Proof of Results}
+
+\subsection{Proof of Lemma}
+
+\begin{lemma}
+	\label{lem:A1}
+    As long as $t>8 \frac{d \log 9 +\log (T/\alpha)}{p_{*}^2}$, the following lower bound
+\end{lemma}
+
+\begin{proof}{Proof of Lemma~\ref{lem:A1}}
+\Halmos
+\end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%
+
+
