@@ -1,101 +1,87 @@
-# Latex Coding Style
+# LaTeX Templates for Academic Papers
 
-Often in time, I find many latex source files in a mess, making editing an excruciating experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the source code neat, readable and not so painful to do editing. Since we use git, it also makes `diff` easy.
+This repository contains LaTeX templates for writing academic papers.
 
-## Math displays
+## Getting Started
 
-The numbered equations should be coded like
+When you clone this repository, follow these steps:
 
-```latex
-\begin{equation}
-  \label{eq:energy-mass}
-  E = MC^2
-\end{equation}
+### Step 1: Choose and Rename Your Template
+
+Pick the template that fits your needs and rename it to your paper name:
+
+```bash
+# For INFORMS journals (OR, MS, MOOR, MSOM, etc.)
+mv template-informs.tex my-paper-title.tex
+
+# For general working papers or course projects
+mv template-plain.tex my-paper-title.tex
+
+# For RGC proposals
+mv template-RGC.tex my-proposal.tex
 ```
 
-Please avoid using `\[...\]`. There are convenient shortcuts in a good editor (e.g., emacs) to auto type the `begin/end` environments. Also, the content in the environment should be indented (by two spaces).
+### Step 2: Delete Unnecessary Files
 
-## Labeling
+Remove the templates and reference folders you don't need:
 
-In order that equations/sections/theorems/etc. to be cited later without too much pain, a neat labelling system is necessary. A label should be like `{type:content}` where `type` could be "eq", "thm", "cond", etc. and `content` should suggest the content of the labeled object. For example, the above equation is labeled as `{eq:energy-mass}`.
+```bash
+# Remove unused templates
+rm template-*.tex
 
-## Text
-
-**One sentence or a group of sentences on the same point per line**. Do not wrap the whole paragraph in one line. There are three reasons for this: 
-
-1. It helps to organize your thoughts. 
-2. We use git for version control. The `diff` is implemented line by line. Writing in this way helps to see what are changed in different versions.
-3. Backward search (from pdf to latex) is done by "lines". Such an organization help you go back to exact the line you want to edit in the latex from the location in the pdf file.  
-
-## Tables and Figures
-
-All Tables and Figures should be created using [pgf plot](http://pgfplots.sourceforge.net). Here are some [example](http://pgfplots.net/tikz/examples/) of using this latex package. The advantage is that no more saving to pdf/picture. 
-
-Numerical experiment (done by any tools like Python, Julia, etc.) can output to a file. And latex (via pgfplot package) can directly read this file to plot a figure or create a table. 
-
-## Annotation
-
-Commenting out a large chunk of code is strictly prohibited. If we are not sure whether it will be needed later, **highlight** it instead of commenting it out. Over the iteration, we either delete it or modify it. 
-
-Comment `%` can **ONLY** be used in the annotation way. For example, 
-
-```latex
-\newcommand{\fl}[1]{\lfloor{#1}\rfloor} % floor of a number
-
-...
-
-% ---- Literature review ---- 
-
-...
-
-% ---- challenge 2 ---- 
-...
-
-% ---- what we do ----
-...
-
-% ---- contributions ----
-
+# Remove reference folders
+rm -rf INFORMS-MNSC-Template-6-10-2024/
+rm -rf INFORMS-OPRE-Template-2-21-2025/
 ```
 
-The following is a nice way to send message to coauthors
+### Step 3: Write Your Paper
 
-```latex
-% >>> author 1: This is an issue to be solved
-% >>>> author 2: I made a few edits. See if that suffices.
+**Use ONE main file** for your entire paper. Keep everything in a single `.tex` file unless the paper becomes very long.
+
+For INFORMS journals, the Electronic Companion (EC) can be separated into a second file if needed:
+- `my-paper.tex` - Main paper
+- `my-paper-ec.tex` - Electronic Companion (optional)
+
+### Step 4: Compile
+
+```bash
+pdflatex my-paper.tex
+bibtex my-paper
+pdflatex my-paper.tex
+pdflatex my-paper.tex
 ```
 
-**Never use** 
+## Directory Structure
 
-```latex
-\iffalse
-...
-\fi
+```
+latex/
+  |-- my-paper.tex        # Your main paper (renamed from template)
+  |-- ref.bib             # Bibliography database
+  |-- style/              # Style files - DO NOT MODIFY
+  |-- tikz/               # TikZ figures and settings
 ```
 
-## Macros
+## For INFORMS Submissions
 
-Here are some macros I defined for convenience. 
+Change the journal by modifying the document class option:
 
 ```latex
-% some macro for typing
-\newcommand{\R}{\mathbb{R}} % real numbers
-\newcommand{\Q}{\mathbb{Q}} % rational numbers
-\newcommand{\Z}{\mathbb{Z}} % integer numbers
-\newcommand{\N}{\mathbb{N}} % natural numbers
-
-\newcommand{\fl}[1]{\lfloor{#1}\rfloor} % floor of a number
-\newcommand{\cl}[1]{\lceil{#1}\rceil} % ceiling of a number
-\newcommand{\norm}[2]{\|{#2}\|_{#1}} % norm
-
-% for highlighting changes
-\usepackage[normalem]{ulem}
-\newcommand{\delete}[1]{\textcolor{red}{\sout{#1}}} % delete
-\newcommand{\ins}[1]{\textcolor{red}{\v{}{#1}}} % insert
-\newcommand{\replace}[2]{\textcolor{red}{\sout{#1}} \textcolor{blue}{{#2}}} % replace #1 with #2
-\newcommand{\emp}[1]{\textcolor{red}{#1}} % emphasize
-\newcommand{\cmt}[2]{\textcolor{blue}{({#1}: {#2})}} % comments
+\documentclass[opre,sglanonrev]{style/informs4}  % Operations Research
+\documentclass[mnsc,dblanonrev]{style/informs4}  % Management Science
+\documentclass[moor,sglanonrev]{style/informs4}  % Math of OR
 ```
 
-However, I do not suggest to define `\lm` for `\lambda`. It does not worth the trouble. Also, if using a good editor (e.g., emacs), frequently used code such as `\lambda` are done by convenient shortcuts. 
+Review options:
+- `sglanonrev` - Single anonymous (non-blind)
+- `dblanonrev` - Double anonymous (blind)
 
+## Coding Style
+
+See [latex-coding-style.md](latex-coding-style.md) for guidelines on writing clean, maintainable LaTeX code.
+
+Key points:
+- One sentence per line (helps with git diff and backward search)
+- Use proper labeling: `\label{eq:name}`, `\label{thm:name}`, `\label{sec:name}`
+- Use `equation` environment, avoid `\[...\]`
+- Create figures with TikZ/pgfplot
+- Never comment out large chunks of code - delete or highlight instead
