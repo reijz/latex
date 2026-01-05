@@ -56,10 +56,19 @@ pdflatex my-paper.tex
 ```
 latex/
   |-- my-paper.tex        # Your main paper (renamed from template)
-  |-- ref.bib             # Bibliography database
+  |-- ref.bib             # Bibliography database (sample - replace with your own)
   |-- style/              # Style files - DO NOT MODIFY
   |-- tikz/               # TikZ figures and settings
 ```
+
+## Bibliography
+
+The `ref.bib` file is a **sample** bibliography. You should:
+
+1. Create your own `.bib` file for your research project, or
+2. Replace the contents of `ref.bib` with your own references
+
+Keep only the references you actually cite in your paper.
 
 ## For INFORMS Submissions
 
