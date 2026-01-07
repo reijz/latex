@@ -1,0 +1,67 @@
+%% ==========================================================================
+%% formality.tex - Comprehensive LaTeX package configuration
+%% ==========================================================================
+%% This file loads commonly needed packages for academic papers.
+%% Include with: \input{formality.tex}
+%%
+%% Packages are organized by category and loaded in optimal order.
+%% ==========================================================================
+
+%%% Core math and graphics
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}             % theorem environments (proof, etc.)
+\usepackage{mathtools}          % extends amsmath
+\usepackage{mathrsfs}           % \mathscr for script fonts
+\usepackage{bm}                 % bold math symbols
+\usepackage{graphicx}
+\usepackage{xcolor}             % color support
+
+%%% Typography
+\usepackage{microtype}          % better typography (kerning, spacing)
+\usepackage[english]{babel}     % hyphenation patterns
+\usepackage{setspace}           % line spacing (\onehalfspacing, \doublespacing)
+
+%%% Tables
+\usepackage{booktabs}           % professional tables (\toprule, \midrule, \bottomrule)
+\usepackage{multirow}           % multi-row cells in tables
+\usepackage{array}              % extended column definitions
+
+%%% Figures
+\usepackage{caption}
+\captionsetup{
+  justification=raggedright,
+  singlelinecheck=false
+}
+\usepackage{subcaption}         % subfigures (\begin{subfigure})
+
+%%% TikZ and plotting
+\usepackage{tikz}
+\usetikzlibrary{shapes,shapes.arrows,arrows,arrows.meta,positioning,calc,patterns,decorations.pathreplacing,topaths,automata}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots,dateplot}
+\usepackage{pgfplotstable}          % tables from data files
+\pgfplotsset{compat=1.18}
+
+%%% Algorithms (comment out if not needed)
+\usepackage[ruled,vlined]{algorithm2e}
+
+%%% Document structure
+\usepackage{subfiles}           % multi-file documents
+\usepackage[toc,page,title,titletoc]{appendix}
+
+%%% Hyperlinks (load near end - redefines many commands)
+\PassOptionsToPackage{hyphens}{url}  % allow URL line breaks at hyphens
+% Define custom link colors (dark blue scheme, print-friendly)
+\definecolor{linkblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for internal refs
+\definecolor{citeblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for citations
+\definecolor{urlblue}{rgb}{0.0, 0.25, 0.55}      % subtle teal for URLs
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkblue,
+  citecolor=citeblue,
+  urlcolor=urlblue,
+  plainpages=false,
+  hypertexnames=false
+}
+\usepackage{bookmark}           % better PDF bookmarks (must follow hyperref)

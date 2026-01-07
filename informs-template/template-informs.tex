@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  Unified Author Submission Template for INFORMS Journals
+%%  Based on official INFORMS templates (2024-2025)
+%%  Modified by Jiheng Zhang @ UST
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Journal options - uncomment ONE:
+%   mnsc - Management Science
+%   opre - Operations Research
+%   moor - Mathematics of Operations Research
+%   msom - Manufacturing & Service Operations Management
+%   isre - Information Systems Research
+%   mksc - Marketing Science
+%   orsc - Organization Science
+%   trsc - Transportation Science
+%   deca - Decision Analysis
+%   ijoc - INFORMS Journal on Computing
+%   stsy - Stochastic Systems
+%   serv - Service Science
+%
+% Review options:
+%   dblanonrev - Double Anonymous Review (blind)
+%   sglanonrev - Single Anonymous Review (non-blind)
+%
+\documentclass[opre,sglanonrev]{informs4}
+% \documentclass[mnsc,dblanonrev]{informs4}
+% \documentclass[moor,sglanonrev]{informs4}
+
+% Bibliography style (informs2014.bst required in same folder)
+\bibliographystyle{informs2014}
+
+% Additional packages (TikZ, pgfplots)
+\input{formality.tex}
+
+% Line spacing (default: 1.5 spacing with 11pt font)
+\OneAndAHalfSpacedXI
+%\OneAndAHalfSpacedXII  % 1.5 spacing with 12pt font
+%\DoubleSpacedXI        % Double spacing with 11pt font
+%\DoubleSpacedXII       % Double spacing with 12pt font
+
+% Equation numbering (uncomment one)
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+
+% Theorem numbering (uncomment one)
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Lemma 1.1, Theorem 1.2)
+\ECRepeatTheorems
+
+% For revisions, input manuscript number with suffix ".Rx"
+% \MANUSCRIPTNO{OPRE-0001-2024.00}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+% Running heads (optional for submission)
+% \RUNAUTHOR{Zhang}
+% \RUNTITLE{Short Title}
+
+% Full title
+\TITLE{An Important and Impactful Paper}
+
+% Authors and affiliations
+\ARTICLEAUTHORS{%
+\AUTHOR{Richard Feynman, Albert Einstein, and Leonhard Euler}
+\AFF{The Hong Kong University of Science and Technology, Clear~Water~Bay, Hong Kong S.A.R., China\\
+\EMAIL{\{feyman, einstein, euler\}@ust.hk}}
+}
+
+\ABSTRACT{
+% big background
+Stochastic control in multi-class queueing networks has been extensively studied primarily focusing on minimizing operational costs (e.g., waiting, abandonment).
+% what is novel
+However, in many real-world applications, the system operator must balance the trade-off between waiting costs and maximizing immediate rewards when assigning customers to service units.
+}
+
+% \FUNDING{This research was supported by [grant number, funding agency].}
+
+\KEYWORDS{Stochastic control, Queueing network, Uncertainty, Online learning, Optimization}
+
+% \HISTORY{Received: Month DD, YYYY; Accepted: Month DD, YYYY}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\cite{Erlang1948,Dantzig1955,Dynkin1956,Bellman1957DP,Little1961,Skorokhod1961,McKean1965,Iglehart1965}
+
+\section{Model}
+
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-x-y.tex}
+  \caption{Sample x-y plot}
+  \label{fig:x-y}
+\end{figure}
+
+\section{Conclusion}
+
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-N-model.tex}
+  \caption{A schematic Model of Outsourcing with rework}
+  \label{fig:N-model-rework}
+\end{figure}
+
+% Code and Data Disclosure (required for OPRE, likely other journals)
+% \section{Code and Data Disclosure}
+% The code and data to support the numerical experiments in this paper can be found at [URL].
+
+% Acknowledgments
+% \ACKNOWLEDGMENT{We thank...}
+
+\bibliography{ref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Electronic Companion (EC) starts here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ECSwitch
+\ECHead{Proofs}
+
+\section{Proof of Results}
+
+\subsection{Proof of Lemma}
+
+\begin{lemma}
+    \label{lem:A1}
+    As long as $t>8 \frac{d \log 9 +\log (T/\alpha)}{p_{*}^2}$, the following lower bound
+\end{lemma}
+
+\begin{proof}{Proof of Lemma~\ref{lem:A1}}
+\Halmos
+\end{proof}
+
+%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%

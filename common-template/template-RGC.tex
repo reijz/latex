@@ -1,0 +1,335 @@
+\documentclass[12pt]{article}
+
+% Page setup (RGC-specific formatting)
+\usepackage[top=1in,bottom=1in,left=1in,right=1in,a4paper]{geometry}
+
+% Fonts (RGC-specific)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% Shared packages and settings
+\input{formality.tex}
+
+% RGC-specific spacing
+\linespread{1.032}
+\setlength{\parskip}{3.6pt}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{8pt}{6pt}
+\titlespacing{\subsection}{0pt}{6pt}{4pt}
+\titlespacing{\paragraph}{0pt}{4pt}{6pt}
+
+% Additional packages for RGC
+\usepackage{sidecap}            % side captions
+\usepackage{adjustbox}          % for resizing content
+\usepackage{pgfgantt}           % Gantt charts
+
+% Bibliography
+\usepackage{natbib}
+\bibliographystyle{chicago}
+
+% Theorem environments
+\newtheorem{proposition}{Proposition}[section]
+
+% Custom macros
+\newcommand{\un}[1]{\underline{#1}}
+\newcommand{\R}{\mathbb{R}}     % real numbers
+\newcommand{\Z}{\mathbb{Z}}     % integer numbers
+\newcommand{\N}{\mathbb{N}}     % Natural numbers
+
+\newcommand{\D}{\mathcal{D}}    % cadlag function space
+
+\newcommand{\pr}{\mathbb{P}}    % probability
+\newcommand{\E}{\mathbb{E}}     % expectation
+
+\newcommand{\dto}{\Rightarrow}  % weak convergence
+\newcommand{\wto}{\stackrel{w}{\to}} % weak convergence
+\newcommand{\uoc}{\emph{u.o.c.\ }} % weak convergence
+\newcommand{\osc}[2]{\textrm{Osc}({#1},{#2})} % modular of continuity
+
+\newcommand{\fl}[1]{\lfloor{#1}\rfloor} % floor of a number
+\newcommand{\cl}[1]{\lceil{#1}\rceil} % ceiling of a number
+\newcommand{\norm}[2]{\|{#2}\|_{#1}} %Norm
+
+\newcommand{\dist}{\mathbf{d}^{fp}} % distance
+\newcommand{\id}[1]{\mathbf{1}_{\{{#1}\}}} % indicator function
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\V}{\mathcal{V}}    % value function of nonperishable system
+\newcommand{\St}{\mathcal{S}}   % state space
+\newcommand{\invw}{\mathcal{W}}
+\newcommand{\I}{\mathcal{I}}    % Resources Set
+\newcommand{\J}{\mathcal{J}}    % Requests Set
+\newcommand{\SR}{\mathcal{S}}   % Removed Resources Set
+\newcommand{\TR}{\mathcal{T}}   % Removed Requests Set
+\newcommand{\A}{\mathscr{A}}    % Flexibility Structure
+
+% some macros for this model
+\newcommand{\route}{\mathcal{R}} % collection of all routes
+\newcommand{\link}{\mathcal{L}} % collection of all links
+\newcommand{\phase}{\mathcal{F}} % collection of all phases
+
+\newcommand{\ext}[1]{\boldsymbol{\mathbf{#1}}} % extended phase level descriptor
+\newcommand{\diag}[1]{\textrm{diag}\left({#1}\right)} % diagonal matrix
+
+\newcommand{\fs}[1]{\bar{#1}^n} % fluid scaling
+\newcommand{\sfs}[2]{\bar{#2}^{n,#1}} % shifted fluid scaling 0
+\newcommand{\fss}[1]{\tilde{#1}^n} % fluid scaling - var
+\newcommand{\ds}[1]{\hat{#1}^n} % diffusion scaling
+\newcommand{\au}[1]{\tilde{#1}}  % augmented load deviation
+\newcommand{\news}[1]{{#1}^{\star,n}} % news vendor policy
+
+\newcommand{\pos}[1]{\left[{#1}\right]^+}  % take the positive part
+\newcommand{\seg}[2]{D_{({#1},{#2}]}}  % take the positive part
+
+
+\title{Privacy-preserving Bandits Algorithm and Post-bandit Inference in High Dimension}
+
+\author{Jiheng Zhang}
+
+\begin{document}
+\pagestyle{empty}
+\pagenumbering{roman}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+
+
+\section*{Abstract}
+\label{sec:abs}
+\addcontentsline{toc}{section}{Abstract}
+
+\begin{spacing}{1.36}
+% === Number of Words ===
+% === Openning ===
+\end{spacing}
+
+\newpage
+
+\section*{Objectives}
+\addcontentsline{toc}{section}{Objectives}
+
+\begin{enumerate}
+
+\item
+\item
+\item
+\item
+\item
+\item
+\end{enumerate}
+
+\newpage
+
+
+\section*{Pathways to Impact Statement}
+\label{sec:impact}
+\addcontentsline{toc}{section}{Pathways to Impact Statement}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\begin{spacing}{1.07}
+
+% ==
+
+\end{spacing}
+
+\newpage
+
+
+% ==================== BACKGROUND & PLAN ====================
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\begin{spacing}{1.07}
+\setlength{\parskip}{3.6pt}
+
+\section{Background of Research}
+\label{sec:background}
+
+\cite{Erlang1948,Dantzig1955,Dynkin1956,Bellman1957DP,Little1961,Skorokhod1961,McKean1965,Iglehart1965}
+
+
+\section{Research Plan and Methodology}
+\label{sec:rese-plan-meth}
+
+
+% \subsection{Further Directions}
+
+
+%-------------------- summary ---------------------
+
+%{\bf Summary}
+\end{spacing}
+
+% ==================== FIGURES & TABLES ====================
+\newpage
+\section*{Graphs}
+\addcontentsline{toc}{section}{Graphs}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+
+% Sample figures from tikz folder
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-x-y.tex}
+  \caption{Sample x-y plot}
+  \label{fig:x-y}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-N-model.tex}
+  \caption{A schematic Model of Outsourcing with rework}
+  \label{fig:N-model-rework}
+\end{figure}
+
+% Project-specific figures
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-regret.tex}
+  \caption{Gaussian Mechanism + Lasso Bandits}
+  \label{fig:Gaussian+Lasso}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-histogram.tex}
+  \caption{Simulation Study for Bandit Inference}
+  \label{fig:estimator}
+\end{figure}
+
+
+% ==================== REFERENCES ====================
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\setlength{\bibsep}{3pt plus 6pt}
+\begin{spacing}{1.42}
+\bibliography{ref}
+\end{spacing}
+\newpage
+
+
+% ==================== Gantt Chart ======================
+
+\section*{Gantt Chart}
+\addcontentsline{toc}{section}{Gantt Chart}
+
+\pagestyle{empty}
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+%
+% A fairly complicated example from section 2.9 of the package
+% documentation. This reproduces an example from Wikipedia:
+% http://en.wikipedia.org/wiki/Gantt_chart
+%
+{
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+\renewcommand\sfdefault{phv}
+\renewcommand\mddefault{mc}
+\renewcommand\bfdefault{bc}
+\setganttlinklabel{s-s}{START-TO-START}
+\setganttlinklabel{f-s}{FINISH-TO-START}
+\setganttlinklabel{f-f}{FINISH-TO-FINISH}
+\sffamily
+\begin{adjustbox}{width=\textwidth,center}
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries\footnotesize,
+    title label node/.append style={below=0pt},
+    include title in canvas=false,
+    bar label font=\mdseries\small\color{black!70},
+    bar label node/.append style={left=1cm},
+    bar/.append style={draw=none, fill=barblue},
+    bar incomplete/.append style={fill=barblue},
+    bar progress label font=\mdseries\footnotesize\color{black!70},
+    group/.append style={fill=groupblue},
+    group incomplete/.append style={fill=groupblue},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=0.6cm},
+    group progress label font=\bfseries\small,
+  ]{1}{18}
+  \gantttitle[
+    title label node/.append style={below left=12pt and -12pt}
+    ]{Year 1}{6}
+  \gantttitle[
+    title label node/.append style={below left=12pt and -10pt}
+    ]{Year 2}{6}
+  \gantttitle[
+    title label node/.append style={below left=12pt and -10pt}
+    ]{Year 3}{6}\\
+  \gantttitlelist{1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35}{1} \\
+  \ganttgroup{High Dimensional Bandits with DP}{1}{11} \\
+  \ganttbar{Formulate the problem}{1}{1} \\
+  \ganttbar[
+    name=WBS1A
+  ]{Design private estimator in linear model}{2}{4} \\
+  \ganttbar[
+    name=WBS1B
+  ]{Design private estimator in GLM}{4}{6} \\
+  \ganttbar[
+    name=WBS1C
+  ]{Analyze regret incurred using above estimator}{6}{8} \\
+  \ganttbar[
+    name=WBS1C
+  ]{Derive computational efficient variant}{9}{11} \\
+  [grid]
+  \ganttgroup[]{Inference on High Dimensional DP Bandit Data}{9}{18} \\
+  \ganttbar[]{Formulate High Dimensional Bandits with DP}{9}{10}\\
+  \ganttbar[]{Developing bias bounds for the lasso estimator}{10}{13} \\
+  \ganttbar[]{Design debias procedure}{13}{15}\\
+  \ganttbar[]{Derive computational efficient variant}{15}{18}
+\end{ganttchart}
+\end{adjustbox}
+}
+
+\newpage
+
+% ==================== EDUCATION PLAN ====================
+
+\section*{Education Plan}
+\addcontentsline{toc}{section}{Education Plan}
+\pagestyle{empty}
+\begin{spacing}{1.32}
+
+This research project will generate new insights, both quantitatively and qualitatively, into the design and implementation of novel machine learning algorithms on data privacy in high dimensional decision-making setting. Despite the increasing use and importance of these issues in machine learning and data technology, few courses currently focus on this emerging area.
+We plan to turn the insights and domain knowledge gained from this project into relevant course materials for undergraduate, graduate, and professional education.
+The material generated from this project can be taught with different focuses at various levels.
+
+At my university, I have developed a series of courses, \emph{IEDA 2520 Probability}, \emph{IEDA 2540 Statistics} and \emph{IEDA 3650  predictive analytics}, which has been well received by students.
+In particular, IEDA 3650 focuses on various machine learning algorithms.
+Based on some of the resulting outcomes, we plan to involve the course into incorporate privacy and bandit algorithms.
+Since our proposed research comes from practical applications, some of the results will become perfect material for the case study of the proposed new course.
+For teaching undergraduate students, the key is to make the basic elements clear and illustrate a few simplified models without losing the essence, such as the fundamental principle of privacy protection. By contrast, Ph.D.\ level courses will focus on the theoretical analysis of various privacy mechanisms and the related algorithms.
+In addition to developing undergraduate courses, I also plan to incorporate some methodologies developed in this research into the course \emph{IEDA 6000E Advanced Methods in Machine Learning} targeted for Ph.D. students in our field by focusing more on the theoretical aspects.
+It is also possible to contribute to the department core Ph.D.\ course \emph{IEDA 5270 Engineering Statistics and Data Analytics}.
+The purpose is to strengthen the training of students (both undergraduate and postgraduate) by improving students' analytical and logical thinking ability, and problem-solving skills for real-world applications.
+
+In addition to fostering the integration of research and education by developing course materials, this research will also involve research students (both undergraduate and Ph.D.\ students with strong mathematical and programming skills) in numerical experiments because code implementation and simulation are an integral part of the project.
+The proposed research has the potential to be rich enough to cover several Ph.D.\ dissertations.
+In fact, we have already involved two Ph.D.\ students in a preliminary study, including a literature review and basic model analysis.
+Students who participate in this research will gain valuable insight into the intricacies underlying mathematics. This research project will help grow future academic and industry leaders.
+
+\end{spacing}
+
+\end{document}

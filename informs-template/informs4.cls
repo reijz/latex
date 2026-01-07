@@ -3,7 +3,56 @@
   [2024/06/03 v1.02
    LaTeX document class for articles submitted to INFORMS]
 %
-\RequirePackage{amsfonts,amsmath,amssymb,ifthen,url,graphicx,color,array,theorem}
+%%% [JZ] Modifications by Jiheng Zhang:
+%%%   - Merged formality-informs.tex packages (hyperref, bookmark, etc.)
+%%%   - Removed running headers (author/title in page corners)
+%%%   - Removed top article info and horizontal rule below title
+%%%   - Removed red disclaimer text, widened abstract area
+%%%   - Search for [JZ] to find all changes
+%
+\RequirePackage{amsfonts,amsmath,amssymb,ifthen,url,graphicx,xcolor,array,theorem}
+%
+%%% [JZ] Additional packages loaded at end of class to avoid conflicts
+\AtEndOfClass{%
+  % Fix font scaling for arbitrary sizes (reduces warnings)
+  \RequirePackage{fix-cm}
+  \RequirePackage{anyfontsize}
+  %
+  % Required font packages (official INFORMS requirement)
+  \RequirePackage{tgtermes}
+  \RequirePackage{newtxtext}
+  % Declare font substitution BEFORE newtxmath to avoid warning
+  \DeclareFontFamily{OMS}{ntxtlf}{}
+  \DeclareFontShape{OMS}{ntxtlf}{m}{n}{<->ssub*cmsy/m/n}{}
+  \RequirePackage{newtxmath}
+  \RequirePackage{bm}
+  \RequirePackage{endnotes}
+  %
+  % Bibliography: natbib with INFORMS author-year style
+  \RequirePackage{natbib}
+  \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+  \def\bibfont{\small}%
+  \def\bibsep{\smallskipamount}%
+  \def\bibhang{24pt}%
+  \def\newblock{\ }%
+  \def\BIBand{and}%
+  %
+  % Define custom link colors (dark blue scheme, print-friendly)
+  \definecolor{linkblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for internal refs
+  \definecolor{citeblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for citations
+  \definecolor{urlblue}{rgb}{0.0, 0.25, 0.55}      % subtle teal for URLs
+  %
+  \RequirePackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    citecolor=citeblue,
+    urlcolor=urlblue,
+    plainpages=false,
+    hypertexnames=false
+  }
+  \RequirePackage{bookmark}  % Better PDF bookmarks
+}
 %
 %%% Journal options (Exactly ONE must be declared as option)
 \newif\if@DECA\@DECAfalse
@@ -1029,17 +1078,18 @@
 
 \def\setoddRF{\hfil} \def\setevenRF{\hfil} % Running feet empty
 
+%%% [JZ] Commented out running headers (author/title) - keeps only page numbers
 \def\setoddRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-  %{\theRRHFirstLine}&\\ 
-  %{\theRRHSecondLine}
+  %{\theRRHFirstLine}&\\   % [JZ] removed
+  %{\theRRHSecondLine}     % [JZ] removed
   {} &  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}\\[-4pt]
   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
   \end{tabular*}}}
 \def\setevenRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-  %&{\theLRHFirstLine}\\
-  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}&{}%{\theLRHSecondLine}
+  %&{\theLRHFirstLine}\\                    % [JZ] removed
+  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}&{}%{\theLRHSecondLine}  % [JZ] removed
   \\[-4pt]
   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
   \end{tabular*}}}
@@ -1056,18 +1106,19 @@
 %\LRHSecondLine{\fs.7.9.{\theJOURNAL} \theVOLUME(\theNO), \theRUNPAGERANGE,
 %  \copyright\,{\theYEAR}\ INFORMS}% default
 
+%%% [JZ] Commented out EC running headers - keeps only page numbers
 \def\setoddECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-  % {\theECRRHFirstLine}&\\ 
-  %{\theECRRHSecondLine}
+  % {\theECRRHFirstLine}&\\  % [JZ] removed
+  %{\theECRRHSecondLine}     % [JZ] removed
   {}&  \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}\\[-4pt]
   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
   \end{tabular*}}}
 \def\setevenECRH{\hbox to \textwidth{\fs.7.8.\tabcolsep0pt
   \begin{tabular*}{\textwidth}[b]{l@{\extracolsep\fill}r}
-  %&{\theECLRHFirstLine}\\ 
+  %&{\theECLRHFirstLine}\\   % [JZ] removed
   \raisebox{0pt}[0pt][0pt]{\fs.10.10.\thepage}&{}
-  %{\theECLRHSecondLine}
+  %{\theECLRHSecondLine}     % [JZ] removed
   \\[-4pt]
   \rlap{\VRHDW{0.5pt}{0pt}{\textwidth}}&\\
   \end{tabular*}}}
@@ -1170,10 +1221,10 @@
 
 \def\@maketitle{%
   \newpage
-  % \theARTICLETOP
+  % \theARTICLETOP  % [JZ] removed top article info
   \theARTICLETITLE
   \theARTICLEAUTHORS\removelastskip
-%\rule{\textwidth}{1pt}
+%\rule{\textwidth}{1pt}  % [JZ] removed horizontal rule below title
   \theARTICLEABSTRACT
 %  \theARTICLERULE
 }
@@ -1196,7 +1247,7 @@
   \HOOKtop
   \begin{flushleft}
   \vspace*{0pt}%
-  \TITLEfont\HD{22}{0}\sffamily\bfseries\theTITLE\HD{0}{15}%
+  \TITLEfont\HD{22}{0}\sffamily\bfseries\theTITLE\HD{0}{15}%  % [JZ] changed from 24 to 22
   \end{flushleft}}
 
 \def\EMAIL#1{#1}% use within AFF
@@ -1938,21 +1989,22 @@
 
 \def\ABSfont{\EGT}
 
+%%% [JZ] Modified abstract area:
+%%%   - Removed red disclaimer text about template usage
+%%%   - Widened abstract from .65\textwidth to .86\textwidth
+%%%   - Added horizontal rule before abstract
 \def\theARTICLEABSTRACT{%
 \begin{Center}
-  % \HOOKb
-  % \vspace*{18pt}
-  % \begin{minipage}[t]{.3\textwidth}\parindent1em\ABSfont
+  % \HOOKb                        % [JZ] removed
+  % \vspace*{18pt}                % [JZ] removed
+  % \begin{minipage}[t]{.3\textwidth}\parindent1em\ABSfont  % [JZ] removed disclaimer box
   % \noindent
-  % \textcolor{red}{Authors are encouraged to submit new papers to INFORMS journals by means of
-	% a style file template, which includes the journal title. However, use of a
-	% template does not certify that the paper has been accepted for publication
-	% in the named journal. INFORMS journal templates are for the exclusive purpose of submitting to an INFORMS journal and are not intended to be a true representation of the article's final published form. Use of this template to distribute papers in print or online or to submit papers to another non-INFORM publication is prohibited.}
-  % \end{minipage}\hfill  
-  \begin{minipage}[t]{.86\textwidth}
+  % \textcolor{red}{Authors are encouraged to submit new papers...}  % [JZ] removed
+  % \end{minipage}\hfill
+  \begin{minipage}[t]{.86\textwidth}  % [JZ] widened from .65 to .86
     \parindent1em
     \ABSfont
-    \noindent\hrulefill\\
+    \noindent\hrulefill\\  % [JZ] added horizontal rule
     \noindent\theABSTRACT\endgraf
     \vskip5pt
     \theFUNDING

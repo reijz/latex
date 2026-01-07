@@ -2,87 +2,90 @@
 
 This repository contains LaTeX templates for writing academic papers.
 
-## Getting Started
-
-When you clone this repository, follow these steps:
-
-### Step 1: Choose and Rename Your Template
-
-Pick the template that fits your needs and rename it to your paper name:
-
-```bash
-# For INFORMS journals (OR, MS, MOOR, MSOM, etc.)
-mv template-informs.tex my-paper-title.tex
-
-# For general working papers or course projects
-mv template-plain.tex my-paper-title.tex
-
-# For RGC proposals
-mv template-RGC.tex my-proposal.tex
-```
-
-### Step 2: Delete Unnecessary Files
-
-Remove the templates and reference folders you don't need:
-
-```bash
-# Remove unused templates
-rm template-*.tex
-
-# Remove reference folders
-rm -rf INFORMS-MNSC-Template-6-10-2024/
-rm -rf INFORMS-OPRE-Template-2-21-2025/
-```
-
-### Step 3: Write Your Paper
-
-**Use ONE main file** for your entire paper. Keep everything in a single `.tex` file unless the paper becomes very long.
-
-For INFORMS journals, the Electronic Companion (EC) can be separated into a second file if needed:
-- `my-paper.tex` - Main paper
-- `my-paper-ec.tex` - Electronic Companion (optional)
-
-### Step 4: Compile
-
-```bash
-pdflatex my-paper.tex
-bibtex my-paper
-pdflatex my-paper.tex
-pdflatex my-paper.tex
-```
-
-## Directory Structure
+## Repository Structure
 
 ```
 latex/
-  |-- my-paper.tex        # Your main paper (renamed from template)
-  |-- ref.bib             # Bibliography database (sample - replace with your own)
-  |-- style/              # Style files - DO NOT MODIFY
-  |-- tikz/               # TikZ figures and settings
+  |-- informs-template/     # INFORMS journal submissions (flat structure)
+  |-- common-template/      # General templates (flat structure)
+  |-- latex-coding-style.md # LaTeX coding guidelines
 ```
 
-## Bibliography
+## Getting Started
 
-The `ref.bib` file is a **sample** bibliography. You should:
+### For INFORMS Journal Submissions
 
-1. Create your own `.bib` file for your research project, or
-2. Replace the contents of `ref.bib` with your own references
+1. Copy the `informs-template/` folder to your project
+2. Rename `template-informs.tex` to your paper name
+3. Compile with pdflatex + bibtex
 
-Keep only the references you actually cite in your paper.
-
-## For INFORMS Submissions
+```bash
+cp -r informs-template/ my-informs-paper/
+cd my-informs-paper/
+mv template-informs.tex my-paper.tex
+pdflatex my-paper.tex && bibtex my-paper && pdflatex my-paper.tex && pdflatex my-paper.tex
+```
 
 Change the journal by modifying the document class option:
 
 ```latex
-\documentclass[opre,sglanonrev]{style/informs4}  % Operations Research
-\documentclass[mnsc,dblanonrev]{style/informs4}  % Management Science
-\documentclass[moor,sglanonrev]{style/informs4}  % Math of OR
+\documentclass[opre,sglanonrev]{informs4}  % Operations Research
+\documentclass[mnsc,dblanonrev]{informs4}  % Management Science
+\documentclass[moor,sglanonrev]{informs4}  % Math of OR
 ```
 
 Review options:
 - `sglanonrev` - Single anonymous (non-blind)
 - `dblanonrev` - Double anonymous (blind)
+
+### For General Papers (Working Papers, Course Projects)
+
+1. Copy the `common-template/` folder to your project
+2. Use `template-plain.tex` for general papers
+3. Use `template-RGC.tex` for RGC grant proposals
+
+```bash
+cp -r common-template/ my-paper/
+cd my-paper/
+mv template-plain.tex my-paper.tex
+pdflatex my-paper.tex && bibtex my-paper && pdflatex my-paper.tex && pdflatex my-paper.tex
+```
+
+## Template Contents
+
+### informs-template/
+```
+informs-template/
+  |-- template-informs.tex  # Main template
+  |-- formality.tex         # TikZ/pgfplots (add libraries as needed)
+  |-- informs4.cls          # Document class (fonts, hyperref, natbib included)
+  |-- informs2014.bst       # Bibliography style
+  |-- ref.bib               # Sample bibliography
+  |-- tikz/                 # TikZ figures
+  |     |-- figure-*.tex
+  |-- pictures/             # Other graphics (JPG, PNG, PDF)
+```
+
+### common-template/
+```
+common-template/
+  |-- template-plain.tex    # General paper template
+  |-- template-RGC.tex      # RGC grant proposal template
+  |-- formality.tex         # Shared packages (math, TikZ, hyperref, etc.)
+  |-- ref.bib               # Sample bibliography
+  |-- tikz/                 # TikZ figures
+  |     |-- figure-*.tex
+  |-- pictures/             # Other graphics (JPG, PNG, PDF)
+```
+
+## Bibliography
+
+The `ref.bib` files are **samples**. You should:
+
+1. Create your own `.bib` file for your research project, or
+2. Replace the contents with your own references
+
+Keep only the references you actually cite in your paper.
 
 ## Coding Style
 

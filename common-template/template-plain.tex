@@ -1,17 +1,18 @@
 \documentclass[11pt]{article}
 
-% page setup
+% Page setup
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,a4paper]{geometry}
 \linespread{1.2}
 \setlength{\parskip}{3.2pt}
 
-% natbib setup
+% Bibliography
 \usepackage{natbib}
 \bibliographystyle{abbrv}
 
-\input{style/formality.tex}
-\input{tikz/setting.tex}
+% Shared packages and settings
+\input{formality.tex}
 
+% Theorem environments (using amsthm from formality.tex)
 \newtheorem{definition}{Definition}[section]
 \newtheorem{assumption}{Assumption}[section]
 \newtheorem{theorem}{Theorem}[section]
@@ -20,8 +21,7 @@
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{remark}{Remark}[section]
 
-% setting numbering
-\usepackage{amsmath}
+% Numbering by section
 \numberwithin{equation}{section}
 \numberwithin{table}{section}
 \numberwithin{figure}{section}
@@ -48,7 +48,7 @@
   Brief
 \end{abstract}
 
-\emph{Key words and phrases:} 
+\emph{Key words and phrases:}
 
 \tableofcontents
 
@@ -56,9 +56,12 @@
 
 \cite{Erlang1948,Dantzig1955,Dynkin1956,Bellman1957DP,Little1961,Skorokhod1961,McKean1965,Iglehart1965}
 
-\section{Introduction}
-
-\input{tikz/figure-x-y.tex}
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-x-y.tex}
+  \caption{Sample x-y plot}
+  \label{fig:x-y}
+\end{figure}
 
 \section{Model}
 \begin{lemma}
@@ -68,7 +71,12 @@
 
 \subsection{Some subsection}
 
-\input{tikz/figure-N-model.tex}
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/figure-N-model.tex}
+  \caption{A schematic Model of Outsourcing with rework}
+  \label{fig:N-model-rework}
+\end{figure}
 
 
 \bibliography{ref}

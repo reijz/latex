@@ -1,0 +1,27 @@
+\begin{tikzpicture}[scale=1.5]
+    % Note: labels should be in figure environment, not in tikzpicture
+    % Draw axes
+    \draw [<->,thick] (0,5) node (yaxis) [above] {$x_2$}
+        |- (5,0) node (xaxis) [right] {$x_1$};
+    % Draw two intersecting lines
+    \draw (0,0) coordinate (a_1) -- (1.6,2) coordinate (a_2);
+    \draw (1.6,2) coordinate (b_1) -- (1.6,4.75) coordinate (b_2);
+    \draw[dashed] (0,4.88) -- (2.7111,0);
+    \node at (3.4,0.4) {$s_2(\bar W(t))=K_2$};
+
+    \coordinate (c) at (intersection of a_1--a_2 and b_1--b_2);
+    % Draw lines indicating intersection with y and x axis. Here we use
+    % the perpendicular coordinate system
+    \draw[dashed] (yaxis |- c) node[left] {$K_2$}
+        -| (xaxis -| c) node[below] {$\frac{\mu_2K_2}{\mu_1}$};
+    \draw[dashed] (2.2, 0.05) -- (2.2,0) node[below] {$K_1$};
+    % Draw a dot to indicate intersection point
+
+    \coordinate (a) at (2.4,0.8);
+    \fill[red] (a) circle (1pt);
+    \draw[blue] (a) -- (1.6,0.8);
+
+    \coordinate (b) at (1.94,0.9);
+    \fill[red] (b) circle (1pt);
+    \draw[blue] (b) -- (1.44,1.8);
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+  \definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+  \begin{axis}[
+  axis line style={white!15!black},
+  tick align=outside,
+  tick pos=left,
+  x grid style={white!80!black},
+  xmin=50, xmax=190,
+  xlabel={Dimension},
+  ylabel={Cumulative Regret},
+  xtick style={color=white!15!black},
+  y grid style={white!80!black},
+  ymin=550, ymax=1100,
+  ytick style={color=white!15!black},
+  width=15cm, height = 8cm
+  ]
+  \addplot [semithick, color0]
+  table {%
+  50 552.948441141061
+  60 561.458791200929
+  70 601.185083349932
+  80 656.624488332352
+  90 588.205612553125
+  100 584.694727360938
+  110 689.972024228008
+  120 673.722985179478
+  130 642.992142072734
+  140 754.5337634725
+  150 764.145987873789
+  160 842.91479035342
+  170 822.626056821395
+  180 903.667888222128
+  190 1070.22626013285
+  };
+  \end{axis}
+\end{tikzpicture}
