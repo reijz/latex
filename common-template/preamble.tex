@@ -39,12 +39,14 @@
 \usepackage{subfiles}           % multi-file documents
 \usepackage[toc,page,title,titletoc]{appendix}
 
+%%% Authors
+\usepackage{authblk}            % multiple authors with affiliations
+
 %%% Hyperlinks (load near end - redefines many commands)
 \PassOptionsToPackage{hyphens}{url}  % allow URL line breaks at hyphens
-% Define custom link colors (dark blue scheme, print-friendly)
-\definecolor{linkblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for internal refs
-\definecolor{citeblue}{rgb}{0.0, 0.0, 0.55}      % dark navy for citations
-\definecolor{urlblue}{rgb}{0.0, 0.25, 0.55}      % subtle teal for URLs
+\definecolor{linkblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{citeblue}{rgb}{0.0, 0.0, 0.55}
+\definecolor{urlblue}{rgb}{0.0, 0.25, 0.55}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
@@ -55,3 +57,60 @@
   hypertexnames=false
 }
 \usepackage{bookmark}           % better PDF bookmarks (must follow hyperref)
+
+%%% Bibliography
+\usepackage{natbib}
+
+%% ==========================================================================
+%% Theorem environments
+%% ==========================================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+%% ==========================================================================
+%% Numbering
+%% ==========================================================================
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+%% ==========================================================================
+%% Common math macros
+%% ==========================================================================
+
+%%% Number sets
+\newcommand{\R}{\mathbb{R}}     % real numbers
+\newcommand{\Z}{\mathbb{Z}}     % integers
+\newcommand{\N}{\mathbb{N}}     % natural numbers
+\newcommand{\Q}{\mathbb{Q}}     % rationals
+\newcommand{\C}{\mathbb{C}}     % complex numbers
+
+%%% Probability and expectation
+\newcommand{\E}{\mathbb{E}}     % expectation
+\newcommand{\Var}{\mathrm{Var}} % variance
+\newcommand{\Cov}{\mathrm{Cov}} % covariance
+\newcommand{\pr}{\mathbb{P}}    % probability
+\newcommand{\ind}[1]{\mathbf{1}_{\{#1\}}} % indicator function
+
+%%% Common operators
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+
+%%% Brackets and norms
+\newcommand{\abs}[1]{\left|#1\right|}           % absolute value
+\newcommand{\norm}[1]{\left\|#1\right\|}        % norm
+\newcommand{\inner}[2]{\langle#1,#2\rangle}     % inner product
+\newcommand{\floor}[1]{\lfloor#1\rfloor}        % floor
+\newcommand{\ceil}[1]{\lceil#1\rceil}           % ceiling
+\newcommand{\pos}[1]{\left[#1\right]^+}         % positive part
+
+%%% Convergence
+\newcommand{\dto}{\Rightarrow}                  % convergence in distribution
+\newcommand{\pto}{\xrightarrow{p}}              % convergence in probability
+\newcommand{\asto}{\xrightarrow{a.s.}}          % almost sure convergence

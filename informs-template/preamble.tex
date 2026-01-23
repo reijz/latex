@@ -10,6 +10,8 @@
 %%   - Bibliography: natbib
 %%   - Hyperlinks: hyperref, bookmark
 %%   - Other: graphicx, xcolor, array, url
+%%   - Theorem environments: defined by the class
+%%   - Operators: \argmin, \argmax
 %% ==========================================================================
 
 %%% Additional math packages (not in cls)
@@ -20,8 +22,41 @@
 \usepackage{booktabs}           % professional tables (\toprule, \midrule, \bottomrule)
 \usepackage{multirow}           % multi-row cells in tables
 
+%%% Figures
+\usepackage{subcaption}         % subfigures (\begin{subfigure})
+
 %%% Algorithms (comment out if not needed)
 % \usepackage[ruled,vlined]{algorithm2e}
 
-%%% Custom macros
-% Add your custom commands here
+%% ==========================================================================
+%% Common math macros
+%% ==========================================================================
+
+%%% Number sets
+\newcommand{\R}{\mathbb{R}}     % real numbers
+\newcommand{\Z}{\mathbb{Z}}     % integers
+\newcommand{\N}{\mathbb{N}}     % natural numbers
+\newcommand{\Q}{\mathbb{Q}}     % rationals
+\newcommand{\C}{\mathbb{C}}     % complex numbers
+
+%%% Probability and expectation
+\newcommand{\E}{\mathbb{E}}     % expectation
+\newcommand{\Var}{\mathrm{Var}} % variance
+\newcommand{\Cov}{\mathrm{Cov}} % covariance
+\newcommand{\pr}{\mathbb{P}}    % probability
+\newcommand{\ind}[1]{\mathbf{1}_{\{#1\}}} % indicator function
+
+%%% Common operators (argmin, argmax already defined in informs4.cls)
+
+%%% Brackets and norms
+\newcommand{\abs}[1]{\left|#1\right|}           % absolute value
+\newcommand{\norm}[1]{\left\|#1\right\|}        % norm
+\newcommand{\inner}[2]{\langle#1,#2\rangle}     % inner product
+\newcommand{\floor}[1]{\lfloor#1\rfloor}        % floor
+\newcommand{\ceil}[1]{\lceil#1\rceil}           % ceiling
+\newcommand{\pos}[1]{\left[#1\right]^+}         % positive part
+
+%%% Convergence
+\newcommand{\dto}{\Rightarrow}                  % convergence in distribution
+\newcommand{\pto}{\xrightarrow{p}}              % convergence in probability
+\newcommand{\asto}{\xrightarrow{a.s.}}          % almost sure convergence

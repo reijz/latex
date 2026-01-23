@@ -57,8 +57,8 @@ pdflatex my-paper.tex && bibtex my-paper && pdflatex my-paper.tex && pdflatex my
 ```
 informs-template/
   |-- template-informs.tex  # Main template
-  |-- preamble.tex          # Additional packages (supplements informs4.cls)
-  |-- informs4.cls          # Document class (fonts, hyperref, natbib included)
+  |-- preamble.tex          # Packages, macros (supplements informs4.cls)
+  |-- informs4.cls          # Document class (fonts, hyperref, natbib, theorems)
   |-- informs2014.bst       # Bibliography style
   |-- ref.bib               # Sample bibliography
   |-- tikz/                 # TikZ figures (optional)
@@ -72,13 +72,39 @@ informs-template/
 common-template/
   |-- template-plain.tex    # General paper template
   |-- template-RGC.tex      # RGC grant proposal template
-  |-- preamble.tex          # Shared packages (math, tables, hyperref, etc.)
+  |-- preamble.tex          # Packages, theorems, macros
   |-- ref.bib               # Sample bibliography
   |-- tikz/                 # TikZ figures (optional)
   |     |-- setup.tex       # TikZ/pgfplots packages
   |     |-- figure-*.tex    # Figure source files
   |-- pictures/             # Other graphics (JPG, PNG, PDF)
 ```
+
+### Preamble Contents
+
+Both templates use a `preamble.tex` file that provides:
+
+**Packages:**
+- Math: amsmath, amssymb, amsthm, mathtools, mathrsfs, bm
+- Tables: booktabs, multirow, array
+- Figures: graphicx, caption, subcaption
+- Typography: microtype, babel, setspace
+- Hyperlinks: hyperref, bookmark
+- Bibliography: natbib
+- Algorithms: algorithm2e (optional)
+
+**Theorem environments:**
+- theorem, lemma, proposition, corollary
+- definition, assumption, remark, example
+
+**Common macros:**
+- Number sets: `\R`, `\Z`, `\N`, `\Q`, `\C`
+- Probability: `\E`, `\Var`, `\Cov`, `\pr`, `\ind{}`
+- Operators: `\argmin`, `\argmax`
+- Brackets: `\abs{}`, `\norm{}`, `\inner{}{}`, `\floor{}`, `\ceil{}`, `\pos{}`
+- Convergence: `\dto`, `\pto`, `\asto`
+
+**Note:** The INFORMS template's `preamble.tex` is lighter because `informs4.cls` already includes many packages.
 
 ### TikZ Support
 

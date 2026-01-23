@@ -7,7 +7,7 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
-% Shared packages and settings
+% Shared packages, theorems, and macros
 \input{preamble.tex}
 
 % TikZ packages - remove if not using TikZ figures
@@ -26,63 +26,37 @@
 \usepackage{adjustbox}          % for resizing content
 \usepackage{pgfgantt}           % Gantt charts
 
-% Bibliography
-\usepackage{natbib}
+% Bibliography style
 \bibliographystyle{chicago}
 
-% Theorem environments
-\newtheorem{proposition}{Proposition}[section]
+%% ==========================================================================
+%% Project-specific macros (beyond common preamble)
+%% ==========================================================================
 
-% Custom macros
-\newcommand{\un}[1]{\underline{#1}}
-\newcommand{\R}{\mathbb{R}}     % real numbers
-\newcommand{\Z}{\mathbb{Z}}     % integer numbers
-\newcommand{\N}{\mathbb{N}}     % Natural numbers
-
+%%% Function spaces
 \newcommand{\D}{\mathcal{D}}    % cadlag function space
 
-\newcommand{\pr}{\mathbb{P}}    % probability
-\newcommand{\E}{\mathbb{E}}     % expectation
-
-\newcommand{\dto}{\Rightarrow}  % weak convergence
+%%% Convergence (additional)
 \newcommand{\wto}{\stackrel{w}{\to}} % weak convergence
-\newcommand{\uoc}{\emph{u.o.c.\ }} % weak convergence
-\newcommand{\osc}[2]{\textrm{Osc}({#1},{#2})} % modular of continuity
+\newcommand{\uoc}{\emph{u.o.c.\ }}   % uniform on compacts
 
-\newcommand{\fl}[1]{\lfloor{#1}\rfloor} % floor of a number
-\newcommand{\cl}[1]{\lceil{#1}\rceil} % ceiling of a number
-\newcommand{\norm}[2]{\|{#2}\|_{#1}} %Norm
-
-\newcommand{\dist}{\mathbf{d}^{fp}} % distance
-\newcommand{\id}[1]{\mathbf{1}_{\{{#1}\}}} % indicator function
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\1}{\mathbf{1}}
-\newcommand{\V}{\mathcal{V}}    % value function of nonperishable system
+%%% Model-specific notation
+\newcommand{\V}{\mathcal{V}}    % value function
 \newcommand{\St}{\mathcal{S}}   % state space
-\newcommand{\invw}{\mathcal{W}}
-\newcommand{\I}{\mathcal{I}}    % Resources Set
-\newcommand{\J}{\mathcal{J}}    % Requests Set
-\newcommand{\SR}{\mathcal{S}}   % Removed Resources Set
-\newcommand{\TR}{\mathcal{T}}   % Removed Requests Set
-\newcommand{\A}{\mathscr{A}}    % Flexibility Structure
+\newcommand{\I}{\mathcal{I}}    % resources set
+\newcommand{\J}{\mathcal{J}}    % requests set
+\newcommand{\A}{\mathscr{A}}    % flexibility structure
 
-% some macros for this model
 \newcommand{\route}{\mathcal{R}} % collection of all routes
-\newcommand{\link}{\mathcal{L}} % collection of all links
+\newcommand{\link}{\mathcal{L}}  % collection of all links
 \newcommand{\phase}{\mathcal{F}} % collection of all phases
 
-\newcommand{\ext}[1]{\boldsymbol{\mathbf{#1}}} % extended phase level descriptor
-\newcommand{\diag}[1]{\textrm{diag}\left({#1}\right)} % diagonal matrix
+%%% Scaling notation
+\newcommand{\fs}[1]{\bar{#1}^n}          % fluid scaling
+\newcommand{\ds}[1]{\hat{#1}^n}          % diffusion scaling
+\newcommand{\ext}[1]{\boldsymbol{\mathbf{#1}}} % extended descriptor
 
-\newcommand{\fs}[1]{\bar{#1}^n} % fluid scaling
-\newcommand{\sfs}[2]{\bar{#2}^{n,#1}} % shifted fluid scaling 0
-\newcommand{\fss}[1]{\tilde{#1}^n} % fluid scaling - var
-\newcommand{\ds}[1]{\hat{#1}^n} % diffusion scaling
-\newcommand{\au}[1]{\tilde{#1}}  % augmented load deviation
-\newcommand{\news}[1]{{#1}^{\star,n}} % news vendor policy
-
-\newcommand{\pos}[1]{\left[{#1}\right]^+}  % take the positive part
-\newcommand{\seg}[2]{D_{({#1},{#2}]}}  % take the positive part
+\newcommand{\diag}[1]{\textrm{diag}\left(#1\right)} % diagonal matrix
 
 
 \title{Privacy-preserving Bandits Algorithm and Post-bandit Inference in High Dimension}
