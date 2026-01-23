@@ -1,10 +1,8 @@
 %% ==========================================================================
-%% formality.tex - Comprehensive LaTeX package configuration
+%% preamble.tex - Core LaTeX packages for academic papers
 %% ==========================================================================
-%% This file loads commonly needed packages for academic papers.
-%% Include with: \input{formality.tex}
-%%
-%% Packages are organized by category and loaded in optimal order.
+%% Include with: \input{preamble.tex}
+%% For TikZ figures, also include: \input{tikz/setup.tex}
 %% ==========================================================================
 
 %%% Core math and graphics
@@ -33,14 +31,6 @@
   singlelinecheck=false
 }
 \usepackage{subcaption}         % subfigures (\begin{subfigure})
-
-%%% TikZ and plotting
-\usepackage{tikz}
-\usetikzlibrary{shapes,shapes.arrows,arrows,arrows.meta,positioning,calc,patterns,decorations.pathreplacing,topaths,automata}
-\usepackage{pgfplots}
-\usepgfplotslibrary{groupplots,dateplot}
-\usepackage{pgfplotstable}          % tables from data files
-\pgfplotsset{compat=1.18}
 
 %%% Algorithms (comment out if not needed)
 \usepackage[ruled,vlined]{algorithm2e}

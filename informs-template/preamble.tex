@@ -1,0 +1,27 @@
+%% ==========================================================================
+%% preamble.tex - Additional packages for INFORMS papers
+%% ==========================================================================
+%% Include with: \input{preamble.tex}
+%% For TikZ figures, also include: \input{tikz/setup.tex}
+%%
+%% The informs4.cls already includes:
+%%   - Math: amsmath, amssymb, amsfonts, bm
+%%   - Fonts: tgtermes, newtxtext, newtxmath
+%%   - Bibliography: natbib
+%%   - Hyperlinks: hyperref, bookmark
+%%   - Other: graphicx, xcolor, array, url
+%% ==========================================================================
+
+%%% Additional math packages (not in cls)
+\usepackage{mathtools}          % extends amsmath (dcases, coloneqq, etc.)
+% Note: mathrsfs conflicts with newtx fonts; use \mathcal for script fonts
+
+%%% Tables
+\usepackage{booktabs}           % professional tables (\toprule, \midrule, \bottomrule)
+\usepackage{multirow}           % multi-row cells in tables
+
+%%% Algorithms (comment out if not needed)
+% \usepackage[ruled,vlined]{algorithm2e}
+
+%%% Custom macros
+% Add your custom commands here

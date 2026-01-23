@@ -57,12 +57,13 @@ pdflatex my-paper.tex && bibtex my-paper && pdflatex my-paper.tex && pdflatex my
 ```
 informs-template/
   |-- template-informs.tex  # Main template
-  |-- formality.tex         # TikZ/pgfplots (add libraries as needed)
+  |-- preamble.tex          # Additional packages (supplements informs4.cls)
   |-- informs4.cls          # Document class (fonts, hyperref, natbib included)
   |-- informs2014.bst       # Bibliography style
   |-- ref.bib               # Sample bibliography
-  |-- tikz/                 # TikZ figures
-  |     |-- figure-*.tex
+  |-- tikz/                 # TikZ figures (optional)
+  |     |-- setup.tex       # TikZ/pgfplots packages
+  |     |-- figure-*.tex    # Figure source files
   |-- pictures/             # Other graphics (JPG, PNG, PDF)
 ```
 
@@ -71,12 +72,23 @@ informs-template/
 common-template/
   |-- template-plain.tex    # General paper template
   |-- template-RGC.tex      # RGC grant proposal template
-  |-- formality.tex         # Shared packages (math, TikZ, hyperref, etc.)
+  |-- preamble.tex          # Shared packages (math, tables, hyperref, etc.)
   |-- ref.bib               # Sample bibliography
-  |-- tikz/                 # TikZ figures
-  |     |-- figure-*.tex
+  |-- tikz/                 # TikZ figures (optional)
+  |     |-- setup.tex       # TikZ/pgfplots packages
+  |     |-- figure-*.tex    # Figure source files
   |-- pictures/             # Other graphics (JPG, PNG, PDF)
 ```
+
+### TikZ Support
+
+TikZ packages are in `tikz/setup.tex`. If your paper doesn't use TikZ figures, remove this line from your template:
+
+```latex
+\input{tikz/setup.tex}
+```
+
+This reduces compilation time and avoids loading unnecessary packages.
 
 ## Bibliography
 
