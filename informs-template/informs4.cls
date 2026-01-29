@@ -1921,7 +1921,7 @@
 \long\def\theARTICLETOPLEFT{%
 {\tabcolsep0pt\fs.10.12.\bf\sffamily%
 \begin{tabular}[t]{@{}l}%
-\includegraphics{informs_Logo}\\[-4pt]
+% \includegraphics{informs_Logo}\\[-4pt] % Logo removed
 {\fontsize{7}{8}\selectfont https://pubsonline.informs.org/journal/\theJOURNALshort}\\ % KGL 14 Mar 2024
 \HD{25}{0}Submitted to {\bi\sffamily\theJOURNAL}\\
 \vphantom{manuscript no. {\sffamily\theMANUSCRIPTNO}}
@@ -1945,7 +1945,7 @@
 \long\def\theARTICLETOPLEFT{%
 {\tabcolsep0pt\fs.10.12.\bf\sffamily%
 \begin{tabular}[t]{@{}l}%
-\includegraphics{informs_Logo}\\[-4pt]
+% \includegraphics{informs_Logo}\\[-4pt] % Logo removed
 {\fontsize{7}{8}\selectfont https://pubsonline.informs.org/journal/\theJOURNALshort}\\
 \HD{25}{0}Submitted to {\bi\sffamily\theJOURNAL}\\
 \vphantom{manuscript no. {\sffamily\theMANUSCRIPTNO}}\end{tabular}}}%
@@ -1968,7 +1968,7 @@
 %
 \long\def\theARTICLETOPLEFT{{\tabcolsep0pt\fs.10.12.\bf\sffamily%
 \begin{tabular}[t]{@{}l}%
-\includegraphics{informs_Logo}\\[-4pt]
+% \includegraphics{informs_Logo}\\[-4pt] % Logo removed
 {\fontsize{7}{8}\selectfont https://pubsonline.informs.org/journal/\theJOURNALshort}\\
 \HD{25}{0}Submitted to {\bi\sffamily\theJOURNAL}\\
 \vphantom{manuscript no. {\sffamily\theMANUSCRIPTNO}}\end{tabular}}}%
