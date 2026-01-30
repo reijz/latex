@@ -5,26 +5,41 @@
 %% For TikZ figures, also include: \input{tikz/setup.tex}
 %% ==========================================================================
 
-%%% Core math and graphics
+%% ------------------------------------------
+%% Math
+%% ------------------------------------------
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{amsthm}             % theorem environments (proof, etc.)
-\usepackage{mathtools}          % extends amsmath
+\usepackage{mathtools}          % extends amsmath (dcases, coloneqq, etc.)
 \usepackage{mathrsfs}           % \mathscr for script fonts
 \usepackage{bm}                 % bold math symbols
+
+%% ------------------------------------------
+%% Graphics and color
+%% ------------------------------------------
 \usepackage{graphicx}
 \usepackage{xcolor}             % color support
 
-%%% Typography
+%% ------------------------------------------
+%% Typography
+%% ------------------------------------------
 \usepackage{microtype}          % better typography (kerning, spacing)
 \usepackage[english]{babel}     % hyphenation patterns
 \usepackage{setspace}           % line spacing (\onehalfspacing, \doublespacing)
 
-%%% Tables
+%% ------------------------------------------
+%% Tables
+%% ------------------------------------------
 \usepackage{booktabs}           % professional tables (\toprule, \midrule, \bottomrule)
 \usepackage{multirow}           % multi-row cells in tables
 \usepackage{array}              % extended column definitions
+% \usepackage{threeparttable}   % tables with footnotes
+% \usepackage{longtable}        % multi-page tables
+% \usepackage{diagbox}          % diagonal boxes in table headers
 
-%%% Figures
+%% ------------------------------------------
+%% Figures
+%% ------------------------------------------
 \usepackage{caption}
 \captionsetup{
   justification=raggedright,
@@ -32,17 +47,32 @@
 }
 \usepackage{subcaption}         % subfigures (\begin{subfigure})
 
-%%% Algorithms (comment out if not needed)
-\usepackage[ruled,vlined]{algorithm2e}
+%% ------------------------------------------
+%% Algorithms (choose one pair, comment out the other)
+%% ------------------------------------------
+\usepackage{algorithm}
+\usepackage{algpseudocode}      % algorithmicx style
+% \usepackage[ruled,vlined]{algorithm2e} % alternative style
 
-%%% Document structure
+%% ------------------------------------------
+%% Lists
+%% ------------------------------------------
+\usepackage{enumitem}           % customizable lists (label=, nosep, etc.)
+
+%% ------------------------------------------
+%% Document structure
+%% ------------------------------------------
 \usepackage{subfiles}           % multi-file documents
 \usepackage[toc,page,title,titletoc]{appendix}
 
-%%% Authors
+%% ------------------------------------------
+%% Authors
+%% ------------------------------------------
 \usepackage{authblk}            % multiple authors with affiliations
 
-%%% Hyperlinks (load near end - redefines many commands)
+%% ------------------------------------------
+%% Hyperlinks (load near end - redefines many commands)
+%% ------------------------------------------
 \PassOptionsToPackage{hyphens}{url}  % allow URL line breaks at hyphens
 \definecolor{linkblue}{rgb}{0.0, 0.0, 0.55}
 \definecolor{citeblue}{rgb}{0.0, 0.0, 0.55}
@@ -58,7 +88,9 @@
 }
 \usepackage{bookmark}           % better PDF bookmarks (must follow hyperref)
 
-%%% Bibliography
+%% ------------------------------------------
+%% Bibliography
+%% ------------------------------------------
 \usepackage{natbib}
 
 %% ==========================================================================
@@ -68,10 +100,16 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{assumption}[theorem]{Assumption}
-\newtheorem{remark}[theorem]{Remark}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
 
 %% ==========================================================================
 %% Numbering
@@ -114,3 +152,15 @@
 \newcommand{\dto}{\Rightarrow}                  % convergence in distribution
 \newcommand{\pto}{\xrightarrow{p}}              % convergence in probability
 \newcommand{\asto}{\xrightarrow{a.s.}}          % almost sure convergence
+
+%% ==========================================================================
+%% Track changes (must resolve before final version)
+%% ==========================================================================
+\usepackage[normalem]{ulem}
+\definecolor{tc-del}{RGB}{180, 40, 40}    % muted red
+\definecolor{tc-ins}{RGB}{0, 90, 160}     % steel blue
+\definecolor{tc-cmt}{RGB}{0, 120, 100}    % teal
+\newcommand{\replace}[2]{\textcolor{tc-del}{\sout{#1}} \textcolor{tc-ins}{{#2}}}
+\newcommand{\delete}[1]{\textcolor{tc-del}{\sout{#1}}}
+\newcommand{\ins}[1]{\textcolor{tc-ins}{{#1}}}
+\newcommand{\cmt}[2]{\textcolor{tc-cmt}{({#1}: {#2})}}

@@ -1,32 +1,109 @@
 %% ==========================================================================
-%% preamble.tex - Additional packages for INFORMS papers
+%% preamble.tex - Packages for INFORMS papers
 %% ==========================================================================
 %% Include with: \input{preamble.tex}
 %% For TikZ figures, also include: \input{tikz/setup.tex}
 %%
-%% The informs4.cls already includes:
-%%   - Math: amsmath, amssymb, amsfonts, bm
-%%   - Fonts: tgtermes, newtxtext, newtxmath
-%%   - Bibliography: natbib
-%%   - Hyperlinks: hyperref, bookmark
-%%   - Other: graphicx, xcolor, array, url
-%%   - Theorem environments: defined by the class
-%%   - Operators: \argmin, \argmax
+%% The informs4.cls already provides:
+%%   Math      : amsmath, amssymb, amsfonts, bm, theorem
+%%   Fonts     : tgtermes, newtxtext, newtxmath, fix-cm, anyfontsize
+%%   Bib       : natbib
+%%   Hyperlinks: hyperref (colored links), bookmark
+%%   Layout    : graphicx, xcolor, array, url, ifthen
+%%   Misc      : endnotes
+%%   Theorems  : theorem, lemma, proposition, corollary, claim,
+%%               conjecture, hypothesis, assumption, remark, example,
+%%               problem, definition, question, answer, exercise
+%%   Operators : \argmin, \argmax
 %% ==========================================================================
 
-%%% Additional math packages (not in cls)
+%% ------------------------------------------
+%% Math
+%% ------------------------------------------
+% \usepackage{amsmath,amssymb,amsfonts}       % --- provided by informs4.cls
+% \usepackage{amsthm}                         % --- provided by informs4.cls (theorem)
 \usepackage{mathtools}          % extends amsmath (dcases, coloneqq, etc.)
-% Note: mathrsfs conflicts with newtx fonts; use \mathcal for script fonts
+% \usepackage{mathrsfs}         % conflicts with newtx fonts; use \mathcal
+% \usepackage{bm}                             % --- provided by informs4.cls
 
-%%% Tables
+%% ------------------------------------------
+%% Graphics and color
+%% ------------------------------------------
+% \usepackage{graphicx}                       % --- provided by informs4.cls
+% \usepackage{xcolor}                         % --- provided by informs4.cls
+
+%% ------------------------------------------
+%% Typography
+%% ------------------------------------------
+\usepackage{microtype}          % better typography (kerning, spacing)
+% \usepackage[english]{babel}   % not needed: informs4.cls handles hyphenation
+% \usepackage{setspace}         % not needed: informs4.cls controls spacing
+
+%% ------------------------------------------
+%% Tables
+%% ------------------------------------------
 \usepackage{booktabs}           % professional tables (\toprule, \midrule, \bottomrule)
 \usepackage{multirow}           % multi-row cells in tables
+% \usepackage{array}                          % --- provided by informs4.cls
+% \usepackage{threeparttable}   % tables with footnotes
+% \usepackage{longtable}        % multi-page tables
+% \usepackage{diagbox}          % diagonal boxes in table headers
 
-%%% Figures
+%% ------------------------------------------
+%% Figures
+%% ------------------------------------------
+\usepackage{caption}
+\captionsetup{
+  justification=raggedright,
+  singlelinecheck=false
+}
 \usepackage{subcaption}         % subfigures (\begin{subfigure})
 
-%%% Algorithms (comment out if not needed)
-% \usepackage[ruled,vlined]{algorithm2e}
+%% ------------------------------------------
+%% Algorithms (choose one pair, comment out the other)
+%% ------------------------------------------
+\usepackage{algorithm}
+\usepackage{algpseudocode}      % algorithmicx style
+% \usepackage[ruled,vlined]{algorithm2e} % alternative style
+
+%% ------------------------------------------
+%% Lists
+%% ------------------------------------------
+\usepackage{enumitem}           % customizable lists (label=, nosep, etc.)
+
+%% ------------------------------------------
+%% Document structure
+%% ------------------------------------------
+% \usepackage{subfiles}         % not needed: INFORMS uses single-file submission
+% \usepackage[toc,page,title,titletoc]{appendix} % INFORMS has its own appendix handling
+
+%% ------------------------------------------
+%% Authors
+%% ------------------------------------------
+% \usepackage{authblk}          % not needed: informs4.cls has its own author macros
+
+%% ------------------------------------------
+%% Hyperlinks (load near end - redefines many commands)
+%% ------------------------------------------
+% --- All provided by informs4.cls: url, hyperref, bookmark
+
+%% ------------------------------------------
+%% Bibliography
+%% ------------------------------------------
+% \usepackage{natbib}                         % --- provided by informs4.cls
+
+%% ==========================================================================
+%% Theorem environments
+%% ==========================================================================
+% --- All provided by informs4.cls:
+%     theorem, lemma, proposition, corollary, claim, conjecture,
+%     hypothesis, assumption, remark, example, problem, definition,
+%     question, answer, exercise (+ repeat* variants for appendix)
+
+%% ==========================================================================
+%% Numbering
+%% ==========================================================================
+% --- Handled by informs4.cls (equation, table, figure numbering)
 
 %% ==========================================================================
 %% Common math macros
@@ -46,7 +123,8 @@
 \newcommand{\pr}{\mathbb{P}}    % probability
 \newcommand{\ind}[1]{\mathbf{1}_{\{#1\}}} % indicator function
 
-%%% Common operators (argmin, argmax already defined in informs4.cls)
+%%% Common operators
+% \argmin, \argmax                            % --- provided by informs4.cls
 
 %%% Brackets and norms
 \newcommand{\abs}[1]{\left|#1\right|}           % absolute value
@@ -60,3 +138,15 @@
 \newcommand{\dto}{\Rightarrow}                  % convergence in distribution
 \newcommand{\pto}{\xrightarrow{p}}              % convergence in probability
 \newcommand{\asto}{\xrightarrow{a.s.}}          % almost sure convergence
+
+%% ==========================================================================
+%% Track changes (must resolve before final version)
+%% ==========================================================================
+\usepackage[normalem]{ulem}
+\definecolor{tc-del}{RGB}{180, 40, 40}    % muted red
+\definecolor{tc-ins}{RGB}{0, 90, 160}     % steel blue
+\definecolor{tc-cmt}{RGB}{0, 120, 100}    % teal
+\newcommand{\replace}[2]{\textcolor{tc-del}{\sout{#1}} \textcolor{tc-ins}{{#2}}}
+\newcommand{\delete}[1]{\textcolor{tc-del}{\sout{#1}}}
+\newcommand{\ins}[1]{\textcolor{tc-ins}{{#1}}}
+\newcommand{\cmt}[2]{\textcolor{tc-cmt}{({#1}: {#2})}}
