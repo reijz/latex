@@ -1,25 +1,102 @@
 name: Telegram Notification
+
 on:
   push:
-    branches: [main, master]
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, closed]
+  pull_request_review:
+    types: [submitted]
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, closed]
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Telegram notification
-        uses: appleboy/telegram-action@master
+      - name: Checkout for file list
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
         with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          message: |
-            🔔 *${{ github.repository }}*
-            
-            *${{ github.event_name }}* by ${{ github.actor }}
-            
-            ${{ github.event.head_commit.message || github.event.pull_request.title }}
-            
-            [View](${{ github.event.head_commit.url || github.event.pull_request.html_url }})
+          fetch-depth: 2
+      - name: Notify Telegram
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COMMIT_MSG_RAW: ${{ github.event.head_commit.message }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          REPO="${{ github.repository }}"
+          COMMIT_MSG=$(echo "$COMMIT_MSG_RAW" | head -1 | sed 's/[<>&"'"'"'`\\]//g' | cut -c1-200)
+          PR_TITLE_SAFE=$(echo "$PR_TITLE" | head -1 | sed 's/[<>&"'"'"'`\\]//g' | cut -c1-200)
+          ISSUE_TITLE_SAFE=$(echo "$ISSUE_TITLE" | head -1 | sed 's/[<>&"'"'"'`\\]//g' | cut -c1-200)
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            # Get changed files
+            FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo "")
+            FILE_COUNT=$(echo "$FILES" | grep -c . || echo 0)
+            if [ "$FILE_COUNT" -le 5 ]; then
+              FILE_LIST=$(echo "$FILES" | sed 's/^/  · /')
+            else
+              FILE_LIST=$(echo "$FILES" | head -5 | sed 's/^/  · /')
+              FILE_LIST="$FILE_LIST
+            +$((FILE_COUNT - 5)) more"
+            fi
+
+            MSG="🚀 <b>${REPO}</b> › ${{ github.ref_name }}
+          ${{ github.actor }}: <code>${COMMIT_MSG}</code>
+          ${FILE_LIST}
+          <a href=\"${{ github.event.head_commit.url }}\">View commit</a>"
+
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            ACTION="${{ github.event.action }}"
+            if [ "$ACTION" = "closed" ] && [ "${{ github.event.pull_request.merged }}" = "true" ]; then
+              ICON="✅"
+              ACTION="merged"
+            elif [ "$ACTION" = "closed" ]; then
+              ICON="🚫"
+            else
+              ICON="📬"
+            fi
+            MSG="${ICON} <b>${REPO}</b> › PR #${{ github.event.pull_request.number }} ${ACTION}
+          ${PR_TITLE_SAFE}
+          by ${{ github.actor }}
+          <a href=\"${{ github.event.pull_request.html_url }}\">View PR</a>"
+
+          elif [ "${{ github.event_name }}" = "pull_request_review" ]; then
+            STATE="${{ github.event.review.state }}"
+            if [ "$STATE" = "approved" ]; then
+              ICON="👍"
+            elif [ "$STATE" = "changes_requested" ]; then
+              ICON="🔧"
+            else
+              ICON="💬"
+            fi
+            MSG="${ICON} <b>${REPO}</b> › PR #${{ github.event.pull_request.number }} review
+          ${STATE} by ${{ github.event.review.user.login }}
+          <a href=\"${{ github.event.review.html_url }}\">View review</a>"
+
+          elif [ "${{ github.event_name }}" = "issue_comment" ]; then
+            MSG="💬 <b>${REPO}</b> › #${{ github.event.issue.number }} comment
+          ${{ github.event.comment.user.login }}
+          <a href=\"${{ github.event.comment.html_url }}\">View comment</a>"
+
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            if [ "${{ github.event.action }}" = "opened" ]; then
+              ICON="🟢"
+            else
+              ICON="🟣"
+            fi
+            MSG="${ICON} <b>${REPO}</b> › Issue #${{ github.event.issue.number }} ${{ github.event.action }}
+          ${ISSUE_TITLE_SAFE}
+          by ${{ github.actor }}
+          <a href=\"${{ github.event.issue.html_url }}\">View issue</a>"
+          fi
+
+          curl -s "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            -d chat_id="${CHAT_ID}" \
+            -d parse_mode=HTML \
+            -d disable_web_page_preview=true \
+            --data-urlencode "text=${MSG}"
